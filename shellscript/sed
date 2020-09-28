@@ -1,0 +1,9 @@
+sed -> stream editor
+
+1. To delete a second line
+sed -e '2d' /etc/passwd
+
+2. To delete all line
+sed -e 'd' /etc/passwd
+
+3. 
