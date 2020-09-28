@@ -1,0 +1,6 @@
+-k --> insecure connection
+-T --> specify filename to upload
+-d --> data to pass
+-A --> To pass data with spaces eg: -A "This is my data
+-u --> username:password
+-w --> write-out --> to pass specific output as a result eg: curl --write-out "%{http_code}\n" "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22" 
