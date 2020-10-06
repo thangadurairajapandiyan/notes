@@ -1,0 +1,48 @@
+1. Rules to create a pattern
+    i[st] --> [is,it] --> it is a list
+    [abc] --> [a,b,c]
+    [a-d] --> [a,b,c,d]
+    [a-dg-ko-s] --> This is a-d, g-k, o-s --> [a,b,c,d,g,h,i,j,k,o,p,q,r,s]
+    [a-zA-Z0-9] --> a,b,c..z,A,B,C..Z,0,1,2..9
+    [\w] --> a,b,c..z,A,B,C..Z,0,1,2..9 and _
+    [\w\w] --> aa,ab,ac,ad....ba,bb,bc.........
+    [\w\w\w] ---> aaa,aab,aac............
+    [\W] --> Matches any character not part of \w
+    [\d] --> Matches decimal digit 0-9
+    [python\d] --> python0, python1, python2, .... python9
+    [\d\d] --> 11, 12, 13, ....99
+    . Matches any single character except newline character (space is included)
+    .. Any two characters except newline character (space is included)
+    \. If we want to search for dot (use escape sequence before . so that . will behave has dot)
+    
+ 2. Pattern for getting ipaddress
+     "\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"         (Here \. means .)
+     
+ 3. Example 1 pattern
+    import re
+    text="This . is a python and it is easy to learn and it is popular one for dev and automation"
+
+    my_pat= 'i[ston]' #is,it,io,in
+    #print(len(re.findall(my_pat,text)))
+    print(re.findall(my_pat,text))
+
+    #my_pat="x[abcdeflmnopq]y" ==> xay,xby.....xqy
+    #      ="x[a-fl-q]y"
+
+    my_pat='\.'
+    print(re.findall(my_pat,text))
+
+    text="This is a ip address of my db1 server: 255.255.255.255  2456234512341234"
+
+    my_pat="\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"
+    print(re.findall(my_pat,text))
+
+    text="This is python @ 345 _ - ("
+    print(re.findall('\w',text))
+    #print(re.findall('.',text))
+    print(re.findall("\W",text))
+
+    text="456 90 this is about deciaml re98gex"
+    print(re.findall('\d\d',text))
+    
+4. 
