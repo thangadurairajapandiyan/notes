@@ -1,3 +1,6 @@
+Note:
+    string --> part of the word or line eg: "is" is a string part of "This"
+
 1. Rules to create a pattern
     i[st] --> [is,it] --> it is a list
     [abc] --> [a,b,c]
@@ -11,10 +14,35 @@
     [\d] --> Matches decimal digit 0-9
     [python\d] --> python0, python1, python2, .... python9
     [\d\d] --> 11, 12, 13, ....99
-    . Matches any single character except newline character (space is included)
-    .. Any two characters except newline character (space is included)
-    \. If we want to search for dot (use escape sequence before . so that . will behave has dot)
+    . --> Matches any single character except newline character (space is included)
+    .. --> Any two characters except newline character (space is included)
+    \. --> If we want to search for dot (use escape sequence before . so that . will behave has dot)
+    ^ --> Start of the string and start of the line incase of multiline string
+    ^i[ts] --> ^ helps in returnig the first occurance of the string either "is" or "it"
+    $ --> End of the string and newline character incase of multiline string
+    learn$ --> $ helps in returnig the last occurance of the string "learn"
+    \b --> Empty string at the beginning or end of the word
+    \\blearn  --> Generally \b is for backspace so we have to put \\b Here it will returen learn string which has space in beginning of string
+    Instead of \\b we can use r"\blearn" r"" means raw string it will skip the special characters
+    \B --> Empty string not at the beginning or end of the string
+    \t, \n, \r --> Matches tab, new line and carriage return respectively
+    {2} --> repeats exactly 2 times
+    {/bpython{4}/b} --> pythonnn
+    {2,4} --> 2,3 or 4 times
+    {2,} --> 2 or more times
+    + --> one or more times (same as {1,})
+    * --> zero or more times
+    ? --> one or none
+    xa?z --> xaz or xz
     
+    Simple Flags for Regex :
+    re.I	re.IGNORECASE	ignore case.
+    re.M	re.MULTILINE	make begin/end {^, $} consider each line.
+    re.S	re.DOTALL	make . match newline too.
+    re.U	re.UNICODE	make {\w, \W, \b, \B} follow Unicode rules.
+    re.L	re.LOCALE	make {\w, \W, \b, \B} follow locale.
+    re.X	re.VERBOSE	allow comment in regex.
+ 
  2. Pattern for getting ipaddress
      "\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"         (Here \. means .)
      
@@ -45,4 +73,45 @@
     text="456 90 this is about deciaml re98gex"
     print(re.findall('\d\d',text))
     
-4. 
+4. Example 2 pattern
+    import re
+    text='isa python l	earn and \n itis easy 	to'
+    #my_pat='^i[ts]'
+    #my_pat="learn$"
+    #my_pat=r"\blearn\b"
+    #my_pat=r"\Blearn\B"
+    my_pat=r"\n"
+    print(re.findall(my_pat,text))
+    
+5. Example 3 pattern
+    import re
+    '''
+    text="This is a pythonnnn and python aaa haaaafd xyzaaaaaaaa"
+    #my_pat=r'\bpython{4}\b'
+    my_pat=r'\bxyza{8}\b'
+    print(re.findall(my_pat,text))
+    '''
+    text="xaz asdfa sdf xaaz xaaaaaaaz xaaaaz  xz"
+    #my_pat=r'\bxa{2,}z\b'
+    #my_pat=r'xa{1,}z'
+    #my_pat=r'xa*z'   
+    my_pat=r'xa?z'
+    print(re.findall(my_pat,text))
+
+6. Example re flags
+    import re
+    '''
+    text="this is a string ThIs is a new staring THIS"
+    my_pat=r'this'
+    print(re.findall(my_pat,text,re.I))
+    '''
+    text="""this is a string EnD
+    this is second line enD
+    This is third line end
+    asfasd this end"""
+    #print(text)
+
+    #my_pat=r'^this'
+    my_pat=r'end$'
+
+    print(re.findall(my_pat,text,re.M|re.I))
