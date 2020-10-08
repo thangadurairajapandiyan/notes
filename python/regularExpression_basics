@@ -42,6 +42,17 @@ Note:
     re.U	re.UNICODE	make {\w, \W, \b, \B} follow Unicode rules.
     re.L	re.LOCALE	make {\w, \W, \b, \B} follow locale.
     re.X	re.VERBOSE	allow comment in regex.
+    To specify more than one of them, use | operator to connect them. For example, re.search(pattern,string,flags=re.IGNORECASE|re.MULTILINE|re.UNICODE).
+    
+    re operations :
+    search --> It looks throughout the entire string and returns the first match. Search operation will look into all the lines
+    match --> same as search, but it will match the string in the first word of the line only(0th index position) (re.M will not work)
+    findall --> it will return a list with matchs
+    finditr --> returns a objects which we can iterate (which contains match, start and ending index)
+    split --> split the given line
+    sub --> replace the matches with given word
+    subn --> replace the matches with given word and prints how many times replaced and we can pass how many times we want to replace
+    compile --> compile the pattern with additional flags and parametrts and we can use the created object to do all operations
  
  2. Pattern for getting ipaddress
      "\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"         (Here \. means .)
@@ -115,3 +126,60 @@ Note:
     my_pat=r'end$'
 
     print(re.findall(my_pat,text,re.M|re.I))
+    
+7. Example search and match
+    import re
+    text="""This  is for
+    python2 and there are two major
+    vers python3 and python in future python4"""
+
+    pat=r'\bpython[23]?\b'
+    '''
+    #print(re.findall(pat,text))
+    match_ob=re.search(pat,text)
+    #rint(match_ob)
+    if match_ob:
+        print("match from ur pattern: ",match_ob.group())
+        print('Starting index: ',match_ob.start())
+        print('Ending index: ',match_ob.end()-1)
+        print("Length: ",match_ob.end()-match_ob.start())
+    else:
+        print("No match found")
+    '''
+    text="""PYTHON2 and there are two major
+    vers python3 and python in future python4"""
+
+    pat=r'\bpython[23]?\b'
+    match_ob=re.match(pat,text,re.I)
+    if match_ob:
+        print("match from ur pattern: ",match_ob.group())
+        print('Starting index: ',match_ob.start())
+        print('Ending index: ',match_ob.end()-1)
+        print("Length: ",match_ob.end()-match_ob.start())
+    else:
+        print("No match found")
+
+8. Findall and finditer
+    import re
+    my_str="This is python and we are having python2 and python3 version"
+    my_pat=r'\bpython[23]?\b'
+    #print(re.search(my_pat,my_str))
+    #print(len(re.findall(my_pat,my_str)))
+    #print(re.findall(my_pat,my_str))
+
+    for each_ob in re.finditer(my_pat,my_str):
+        print(f'The match is: {each_ob.group()} starting index: {each_ob.start()}, ending index {each_ob.end()-1}')
+        
+9. Compile
+    import re
+    my_str="This is about python. Python is easy to learn  and we have two major versions: python2 and python3 "
+
+    my_pat=r'\bPython[23]?\b'
+    #print(re.search(my_pat,my_str))
+    #print(re.findall(my_pat,my_str,flags=re.I))
+    #print(re.split(my_pat,my_str))
+    pat_ob=re.compile(my_pat,flags=re.I)
+    print(pat_ob)
+    print(pat_ob.search(my_str))
+    print(pat_ob.findall(my_str))
+    #re.findall(my_pat,my_str)===> re.complie(my_pat).findall(my_str)
