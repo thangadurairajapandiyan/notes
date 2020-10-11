@@ -10,3 +10,9 @@
   ~/.gitconfig File (snip)
   [core]
   editor = notepad++.exe -multiInst -nosession
+  
+2. To see files tracked in staging area
+  git ls-files
+  
+3. To undo the changes from staging area
+  git reset HEAD filename
