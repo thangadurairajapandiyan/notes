@@ -16,3 +16,23 @@
   
 3. To undo the changes from staging area
   git reset HEAD filename
+  
+4. Git log
+  git log --oneline --graph --decorate
+    --oneline --> will show the logs in one line for each commit
+    --graph --> show the branch in graph
+    --decorate --> shows the tags and branches
+    
+  git log --since="3 days ago"  (To show logs of last 3 days)
+  
+5. To see commits happend in specific file
+  git log -- fileame
+  
+6. To know the diff from commit hash
+  git show commit-hash
+  
+7. To set alias for git commands
+  git config --global alias.ALIAS_NAME(gitlog) "log --all --oneline --graph --decorate"
+  
+8. Excluding unwanted files and folders
+  create .gitignore and commit. we can put our filename, foldername or regular expression to ignore the files
