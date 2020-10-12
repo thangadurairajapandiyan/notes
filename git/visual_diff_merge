@@ -17,3 +17,12 @@ git config --global mergetool.prompt false
   
 5. To see diff between staging area and last commit
   git diff --staged HEAD (HEAD means last commit in current branch)
+  
+6. To see diff between two commits
+  git diff commit-hash commit-hash
+  git diff HEAD HEAD^ (HEAD --> means top commit, HEAD^ --> top commit minus 1)
+  git difftool commit-hash commit-hash (difftool will show one file at a time, press q to close it and open the next diff file )
+  
+7. To see diff between local repo and remote repo
+  git diff master origin/master
+
