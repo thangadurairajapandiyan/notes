@@ -1,0 +1,24 @@
+1. To list all branches from local nd remote
+  git branch -a
+  
+2. To list local branches
+  git branch
+  
+3. To list remote branches
+  git branch -r
+  
+4. To create branch
+  git branch new_branch_name current_branch_name (if current_branch_name is not passed it will automatically take the current branch name)
+  
+5. To change branch
+  git checkout branch_name
+  
+6. To create branch and checkout to that branch
+  git checkout -b new_branch_name (This will fail, if we pass existing branch name)
+  
+7. To delete a local branch
+  git branch -d branch_name (For deleting a branch, we should change to other branch first)
+  --> The -d option will delete the branch only if it has already been pushed and merged with the remote branch.
+  --> Use -D instead if you want to force the branch to be deleted, even if it hasn't been pushed or merged yet.
+  
+8. 
