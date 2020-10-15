@@ -1,0 +1,16 @@
+1. Adding new yum repo to yum
+  * Create the name.repo file and add the following content in that
+    [SANDBOX]
+    name=SANDBOX Repository (SANDBOX)
+    baseurl=https://repo_url/yum-repo-name
+    enabled=1
+    protect=0
+    gpgcheck=0
+    metadata_expire=30s
+    autorefresh=1
+    type=rpm-md
+    sslverify=0
+    priority=1
+  * Then place this file in this folder /etc/yum.repod.d/
+  
+2. If you want to download only from jfrog artifact repository, delete all other files in /etc/yum.repod.d/
