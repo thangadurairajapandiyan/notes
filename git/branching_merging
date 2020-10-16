@@ -38,4 +38,6 @@
 11. (Also called as Automatic Merge)If we create new branch and created 3 commits and also in the main branch 2 commits are happend. Now if you switch to main branch and run "git merge merging_branch_name"
     by default Fast-Forward will be disabled
     
-12. 
+12. Merge Conflit
+  Changed and committed the changes in merging_branch and then changed to main branch changed the same file in same line and commited the changes, now try merging merge conflict will come,
+  since two chnages are there in the same line, we have to manually edit the changes, add and commit.
