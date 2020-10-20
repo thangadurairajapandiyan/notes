@@ -31,3 +31,5 @@ The source command can be used to load any functions file into the current shell
 This will return true for both /etc/hosts and /dev/null and for directories.
 [ -f FILE ] True if FILE exists and is a regular file. This will return true for /etc/hosts and false for /dev/null (because it is not a regular file), and false for /dev since it is a directory.
 
+7. To get filename without extension
+$(basename $PACKAGE_NAME .tgz)
