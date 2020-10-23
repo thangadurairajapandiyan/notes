@@ -5,5 +5,9 @@ name in the yaml file, while creating the pod kubernetes will assign the "defaul
 
 3. If we create new service account one new secret will be created automatically with the token for authenticating the api
 
-4. we can create ImagePullSecret and assign to the service account
+4. we can create ImagePullSecret with type docker-registry and assign to the service account using either,
+kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "myregistrykey"}]}'
+or kubectl edit to to add the ImagePullSecrets details
+
+5. Service account is namespace scoped
 
