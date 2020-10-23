@@ -33,3 +33,16 @@ This will return true for both /etc/hosts and /dev/null and for directories.
 
 7. To get filename without extension
 $(basename $PACKAGE_NAME .tgz)
+
+8. To encode base64
+echo data | base64
+
+9. To decode base64
+echo encoded_value(eg. ZGVmYXVsdA==) | base64 -d
+
+10. To untar a file
+tar -xvf file.tgz
+
+11 To compress and generate .tgz file
+tar -cvzf file_name.tgz folder_name/
+
