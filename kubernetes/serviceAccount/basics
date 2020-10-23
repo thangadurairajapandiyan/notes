@@ -5,3 +5,5 @@ name in the yaml file, while creating the pod kubernetes will assign the "defaul
 
 3. If we create new service account one new secret will be created automatically with the token for authenticating the api
 
+4. we can create ImagePullSecret and assign to the service account
+
