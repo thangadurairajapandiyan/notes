@@ -1,3 +1,7 @@
 1. By default one Sevice account named "default" will be created in all namespaces. And If we craete the pod in default namespace and if we didnt specify the service account
 name in the yaml file, while creating the pod kubernetes will assign the "default" service account to this pod
 
+2. By defautlt for each service account one secret will be created automatically with the token for authenticating the api
+
+3. If we create new service account one new secret will be created automatically with the token for authenticating the api
+
