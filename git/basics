@@ -61,4 +61,17 @@
   git stash -u --> to stash both tracked and untracked files
   we can add the untracked file and run "git stash" also
   
+  To do git stash and git stash drop in a single command --> git stash pop
+  
+  Create a stash with message
+  git stash save "message"
+ 
+  To know the file changes in stash
+  git stash show stah@{index_no}  --> latest stash will be assigned with index no '0'
+  
+  To apply the specific stash from stash list
+  git stash apply stash@{index_no}
+  
+  
+  
   
