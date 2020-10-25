@@ -36,3 +36,8 @@
   
 8. Excluding unwanted files and folders
   create .gitignore and commit. we can put our filename, foldername or regular expression to ignore the files
+
+9. Rebase
+   Create two branch master and feature. do 2 commits in each branch, you are currently in feature and not planning to merge the feature branch commits to master, but instead
+   wants the two commits from master branch to be synced with tis feature branch.
+   git rebase master
