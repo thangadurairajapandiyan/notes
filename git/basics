@@ -47,3 +47,18 @@
   later purpose we can save it.Run "git stash" and the current branch will become clean.
   git stash or git stash save (By default if we run git stash it will append the "save" keyword to it )
   
+  To list the stash
+  git stash list
+  
+  To drop the latest stash from list
+  git stash drop
+  
+  To apply the stash to the current branch
+  git stash apply
+  
+  If we do some chnages in the tracked file and also in one untacked file (new file). If we run git stash now, it will only stash the tracked files, it wont stash the untracked
+  files
+  git stash -u --> to stash both tracked and untracked files
+  we can add the untracked file and run "git stash" also
+  
+  
