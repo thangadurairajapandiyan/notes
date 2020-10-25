@@ -41,3 +41,9 @@
    Create two branch master and feature. do 2 commits in each branch, you are currently in feature and not planning to merge the feature branch commits to master, but instead
    wants the two commits from master branch to be synced with tis feature branch.
    git rebase master
+
+10. Stash
+  In the current branch we have done some changes in the file and we havent committed those changes, now you want to work on some other idea, but you want to save this changes for
+  later purpose we can save it.Run "git stash" and the current branch will become clean.
+  git stash or git stash save (By default if we run git stash it will append the "save" keyword to it )
+  
