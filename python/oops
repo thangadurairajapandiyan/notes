@@ -9,6 +9,7 @@ Object Oriented Programming:
   while alling the methods in class, the "self" parameter will be assigned with the value "ovject_name" which we have created
   Inside a class, we can access one method variables in another methods
   we can access the variables inside the methods of class by object_name.variable_name from outside the class(eg. From main function)
+  we can access the class variables by class_name.variable_name inside the method of a class
   
   EXAMPLE: 1
   import os
