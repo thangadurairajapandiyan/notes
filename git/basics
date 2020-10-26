@@ -45,3 +45,6 @@
 10. Git help
   git help command(pull, push, stash)
   
+11 Cherry-pick (To take one commit from one branch and apply to another branch)
+  Create two branch master and feature, do one commit in master, switch to feature do two commits, now you want to take the one commit from feature to master branch and dont
+  want to disturb the feature branch, now switch to the master branch run "git cherry-pick commit_id" (commit-id from feature branch) 
