@@ -42,5 +42,6 @@
    wants the two commits from master branch to be synced with tis feature branch.
    git rebase master
 
-
+10. Git help
+  git help command(pull, push, stash)
   
