@@ -1,3 +1,12 @@
 Object Oriented Programming:
   It is about: Class, Object, Inheritance, Polymorphism, Data Abstraction and Data Encapsulation.
+  Each objet could be anything which exists in real-time, Each objects has characteristics and functions.
+    Charateristics --> name, age (variables)
+    Functions
+    
+  why oops? --> to group related functions, To create template/blue print
+  Inside the class the functions are clalled as methods and the methods will have first parameter "self"
+  
+  
+    
 
