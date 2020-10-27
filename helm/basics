@@ -1,5 +1,5 @@
 HELM-3
-1. To install helm chart
+  To install helm chart
   helm install -f myvalues.yaml myredis ./redis
   or helm install --set name=prod myredis ./redis
   or helm install --set-string long_int=1234567890 myredis ./redis
@@ -14,5 +14,9 @@ HELM-3
   To delete helm chart
   helm uninstall release_name
   helm uninstall release_name --dry-run
+  
+  To list the installed charts
+  helm list
+  
   
 HELM-2
