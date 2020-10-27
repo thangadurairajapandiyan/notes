@@ -260,3 +260,33 @@ Object Oriented Programming:
   #per1.__display()
   #print(per1.name)
   #print(per1.__age)
+
+  STATIC Methods in class:
+    Static methods cannot access the properties of the class itself. However, when you need a utility function that doesn't access any properties of a class but makes sense
+    that it belongs to the class, we use static functions.
+    The static methods are decorated with "@staticmethod" above the method declaration inside the class
+    It can be accessed without creating the object, class_name.static_method_name()
+    
+  EXAMPLE: 10
+  class Dates:
+      def __init__(self, date):
+          self.date = date
+
+      def getDate(self):
+          return self.date
+
+      @staticmethod
+      def toDashDate(date):
+          return date.replace("/", "-")
+
+  date = Dates("15-12-2016")
+  dateFromDB = "15/12/2016"
+  dateWithDash = Dates.toDashDate(dateFromDB)
+
+  if(date.getDate() == dateWithDash):
+      print("Equal")
+  else:
+      print("Unequal")
+    
+    
+    
