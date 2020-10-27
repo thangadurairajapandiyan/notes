@@ -5,6 +5,9 @@ HELM-3
   or helm install --set-string long_int=1234567890 myredis ./redis
   or helm install --set-file my_script=dothings.sh myredis ./redis
   
+  To install helm charts on specific namespace
+  helm install -f myvalues.yaml myredis ./redis -n nemespace_name
+  
   we can pass multiple values.yaml or --set , but which is the rightmost will have the precedance
   helm install -f myvalues.yaml -f override.yaml  myredis ./redis
   
@@ -14,9 +17,11 @@ HELM-3
   To delete helm chart
   helm uninstall release_name
   helm uninstall release_name --dry-run
+  helm uninstall release_name -n namespace_name (To delete helm chart which was installed on specific namespace)
   
   To list the installed charts
   helm list
+  helm list -n namespace_name (To list installed helm charts on specific namespace)
   
   
 HELM-2
