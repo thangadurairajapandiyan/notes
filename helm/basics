@@ -1,0 +1,18 @@
+HELM-3
+1. To install helm chart
+  helm install -f myvalues.yaml myredis ./redis
+  or helm install --set name=prod myredis ./redis
+  or helm install --set-string long_int=1234567890 myredis ./redis
+  or helm install --set-file my_script=dothings.sh myredis ./redis
+  
+  we can pass multiple values.yaml or --set , but which is the rightmost will have the precedance
+  helm install -f myvalues.yaml -f override.yaml  myredis ./redis
+  
+  Dry-run
+  helm install -f myvalues.yaml myredis ./redis --dry-run
+  
+  To delete helm chart
+  helm uninstall release_name
+  helm uninstall release_name --dry-run
+  
+HELM-2
