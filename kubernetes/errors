@@ -1,0 +1,2 @@
+1. Error: failed pre-install: job failed: DeadlineExceeded
+  Ans: activeDeadlineSeconds: 30 in the Job is reached the limit
