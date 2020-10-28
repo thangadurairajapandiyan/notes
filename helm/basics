@@ -23,5 +23,8 @@ HELM-3
   helm list
   helm list -n namespace_name (To list installed helm charts on specific namespace)
   
+  To timeout the helm install command
+  helm install -f values.yaml test . -n cnf --timeout 20s  (Default is 5 minutes if we didnt pass the --timeout parameter)
+  
   
 HELM-2
