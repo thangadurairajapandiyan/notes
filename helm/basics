@@ -26,5 +26,9 @@ HELM-3
   To timeout the helm install command
   helm install -f values.yaml test . -n cnf --timeout 20s  (Default is 5 minutes if we didnt pass the --timeout parameter)
   
+  To get the config file(manifest) which we used during helm install
+  helm get manifest release_name
+  helm get manifest reease_name -n namespace_name
+  
   
 HELM-2
