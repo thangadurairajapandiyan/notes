@@ -1,2 +1,7 @@
-DNS - Domain Name system
-DHCP - Dynamic Host Configuration Protocol
+LINUX:
+  DNS - Domain Name system
+  DHCP - Dynamic Host Configuration Protocol
+  ARP - Address Resolution Protocol
+  MAC -  Media Access Control (MAC) address
+  
+
