@@ -38,4 +38,7 @@ ip -n NAMESPCE_NAME addr add IP_ADDRESS dev INTERFACE_NAME (eg. ip -n red addr a
 ip -n NAMESPCE_NAME link set INTERFACE_NAME up (eg. ip -n red link set veth-red up )
 
 11. To create network interface in host to act as virtual bridge the solution is provided by bridge network
-ip link add INTERFACE_NAME tyep bridge (eg. ip link add INTERFACE_NAME tyep bridge)
+ip link add INTERFACE_NAME type bridge (eg. ip link add v-net-0 type bridge)
+
+12. To attach interface to virtual bridge interface(virtual switch)
+ip link set INTERFACE_NAME master BRIDGE_INTERFACE_NAME (eg. ip link set veth-red master v-net-0)
