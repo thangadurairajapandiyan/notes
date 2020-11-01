@@ -12,4 +12,16 @@ ip netns exec NAMESPACE_NAME COMMAND  (eg. ip netns exec red ip link  --> will s
 OR
 ip -n NAMESPACE_NAME link 
 
-5.
+5. ARP functionality is to translate IP address to physical address (arp is euivalent to ip neigh or ip neighbour or ip neighbor)
+To get arp table
+ip neigh
+To get arp table in specific namespace
+ip netns exec NMAESPACE_NAME ip neigh
+
+6. To list the routing table (ip route is equivalent toroute in new systems)
+ip route
+To list routing table in specific namespace
+ip netns exec NAMESPACE_NAME ip route
+
+7. 
+
