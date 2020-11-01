@@ -1,0 +1,15 @@
+1. To list the running process in linux
+ps aux
+
+2. To create new network namespace
+ip netns add namespace_name
+
+3. To list network namespace
+ip netns
+
+4. To run the command inside the namespace
+ip netns exec NAMESPACE_NAME COMMAND  (eg. ip netns exec red ip link  --> will show the interfaces inside the namespce)
+OR
+ip -n NAMESPACE_NAME link 
+
+5.
