@@ -49,3 +49,6 @@ ip link add INTERFACE_NAME type bridge (eg. ip link add v-net-0 type bridge)
 
 12. To attach interface to virtual bridge interface(virtual switch)
 ip link set INTERFACE_NAME master BRIDGE_INTERFACE_NAME (eg. ip link set veth-red master v-net-0)
+
+13. To know about specific interface
+ip link show interface_name (eg. ip link show eth0)
