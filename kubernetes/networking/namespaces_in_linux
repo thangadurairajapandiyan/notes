@@ -58,3 +58,6 @@ arp node_name (eg. aro node01)
 
 15. To get port no of service
 netstat -tnlp
+
+16. To know how many connections established to etcd
+netstat -anp | grep etcd
