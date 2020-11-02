@@ -1,0 +1,11 @@
+1. To see the cni configured in kubernetes(kubeadm)
+ps -aux | grep kubelet
+
+2. To check the network plugin check this parameter in kubelet 
+--network-plugin
+
+3. To check the network plugin binaries/scripts
+--cni-bin-dir
+
+4. To check the network plugin configuration
+Check in this folder /etc/cni/net.d/
