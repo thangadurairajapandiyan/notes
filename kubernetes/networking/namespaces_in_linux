@@ -55,3 +55,6 @@ ip link show interface_name (eg. ip link show eth0)
 
 14. To run arp command in another node
 arp node_name (eg. aro node01)
+
+15. To get port no of service
+netstat -tnlp
