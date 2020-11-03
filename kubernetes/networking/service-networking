@@ -1,1 +1,2 @@
-hh
+1. To know the Ip ranage assigned for Pod in kubeadm
+cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep cluster-ip-range
