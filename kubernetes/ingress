@@ -1,4 +1,0 @@
-1. Types of Routing
- Path based routing : http://example.com/wear, http://example.com/video
- Host based routing : http://wear.example.com, http://video.example.com
- 
