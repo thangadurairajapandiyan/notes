@@ -1,0 +1,20 @@
+Storage in Docker:
+  --> Storage drivers
+  --> Volume Drivers(plugins)
+
+STORAGE DRIVERS (File system)
+docker stores their files in
+/var/lib/docker/
+    aufs/
+    containers/
+    image/
+    volumes/
+   
+Volume Mounting - Mouting the docker volume to container
+Bind Mounting - Mounting the folder from host to container
+
+Storage drivers are responsible for this layered architecture, creating a writable layer, moving files across layers(copying, writing)
+AUFS, ZFS, BTRFS, Device Mapper, overlay, overlay2
+
+The selcetion of storage drivers depends on the underlying operating system
+With ubuntu the default storage driver is AUFS
