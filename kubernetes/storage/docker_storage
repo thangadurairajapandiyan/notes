@@ -20,6 +20,12 @@ STORAGE DRIVERS (File system)
   With ubuntu the default storage driver is AUFS
   
 Volume Drivers
-Volumes(Volume Mounting, Bind Mounting) are not handled by storage drivers. The default volume driver plugin is "Local" which help in createig the volume in docker host and stores it in /var/lib/docker/volumes directory.
-There are many other volume driver plugins that allow you to create a volume on third party solutions like Azure File Storage, Convoy, Digital ocean block storage, Flocker, gce-docker,
-GlusterFs, Netapp, RexRay, Portwork, Vmware vSphere storage
+  Volumes(Volume Mounting, Bind Mounting) are not handled by storage drivers. The default volume driver plugin is "Local" which help in createig the volume in docker host and stores it in /var/lib/docker/volumes directory.
+  There are many other volume driver plugins that allow you to create a volume on third party solutions like Azure File Storage, Convoy, Digital ocean block storage, Flocker, gce-docker,
+  GlusterFs, Netapp, RexRay, Portwork, Vmware vSphere storage
+  
+  RexRay can be used to provision the storage in AWS EBS, Google persistet disk, openstack cinder
+  
+  while creating the docker container we can provide the volume-driver parameter as
+  doker run -it --name mysql --volume-driver rexray/ebs --mount src=ebs-vol,dest=/var/lib/mysql mysql (This will create a container and attach a volume from AWS cloud)
+  Even now if the container exists, the data is safe in was cloud
