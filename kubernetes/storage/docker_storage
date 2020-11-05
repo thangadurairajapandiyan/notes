@@ -12,6 +12,7 @@ STORAGE DRIVERS (File system)
 
   Volume Mounting - Mouting the docker volume to container
   Bind Mounting - Mounting the folder from host to container
+  tmpfs mounting - storing data in Ram (only for linux) 
 
   Storage drivers are responsible for this layered architecture, creating a writable layer, moving files across layers(copying, writing)
   AUFS, ZFS, BTRFS, Device Mapper, overlay, overlay2
@@ -20,7 +21,7 @@ STORAGE DRIVERS (File system)
   With ubuntu the default storage driver is AUFS
   
 Volume Drivers
-  Volumes(Volume Mounting, Bind Mounting) are not handled by storage drivers. The default volume driver plugin is "Local" which help in createig the volume in docker host and stores it in /var/lib/docker/volumes directory.
+  Volumes(Volume Mounting, Bind Mounting, tmpfs mounting) are not handled by storage drivers. The default volume driver plugin is "Local" which help in createig the volume in docker host and stores it in /var/lib/docker/volumes directory.
   There are many other volume driver plugins that allow you to create a volume on third party solutions like Azure File Storage, Convoy, Digital ocean block storage, Flocker, gce-docker,
   GlusterFs, Netapp, RexRay, Portwork, Vmware vSphere storage
   
