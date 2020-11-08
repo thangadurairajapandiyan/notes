@@ -1,5 +1,10 @@
-1. How to copy a copy from one server to another jenkins server
+Reference:
+https://www.guru99.com/jenkins-interview-questions.html
 
-2. How thw restore the Deleted job
+Questions:
+1. How to copy from one server to another jenkins server
+
+2. How to restore the Deleted job
 
 3. How to take backup of the jenkins
+Generally just copy the JENKINS_HOME diretory for copy, we can use ThinBackup pulgin to do the backup
