@@ -1,0 +1,5 @@
+1.Docker commands not working in freestyle job and in jenkins pipeline
+Add jenkins user to docker group and restart the jenkins server(Restart using systemctl/service command)
+
+2. kubectl command not working when using as commands in Freestyle/pipeline/ansibble-playbook, if kubernetes plugin is used, it will handle the configuration
+create .kube diretory in jenkins home directory and copy the config file to .kube folder
