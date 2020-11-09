@@ -320,3 +320,35 @@ nodes/
 │       │   └── authentication-tokens.jar
 │       └── licenses.xml
 ├── authentication-tokens.jpi
+
+5. tree /var/lib/jenkins/users
+users/
+├── admin_14784160218747936979
+│   └── config.xml
+└── users.xml
+
+6. tree /var/lib/jenkins/userContent
+userContent/
+└── readme.txt
+
+7. tree /var/lib/jenkins/workspace
+workspace/
+├── master
+└── sleep
+
+8. tree /var/lib/jenkins/secrets
+secrets/
+├── com.cloudbees.plugins.credentials.SecretBytes.KEY
+├── filepath-filters.d
+│   └── 30-default.conf
+├── hudson.console.AnnotatedLargeText.consoleAnnotator
+├── hudson.console.ConsoleNote.MAC
+├── hudson.model.Job.serverCookie
+├── hudson.util.Secret
+├── jenkins.model.Jenkins.crumbSalt
+├── jenkins.slaves.JnlpSlaveAgentProtocol.secret
+├── master.key
+├── org.jenkinsci.main.modules.instance_identity.InstanceIdentity.KEY
+├── slave-to-master-security-kill-switch
+└── whitelisted-callables.d
+    └── default.conf
