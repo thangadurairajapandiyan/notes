@@ -27,5 +27,10 @@ Hello () {
 # Invoke your function
 Hello Zara Ali
 # Capture value returnd by last command
-ret=$?
+ret=$?  # For function it will return return_value, for others it will return status code
 echo "Return value is $ret"
+
+8. The history command cnnot be executed from bash shell script, but it will work in c shell
+
+9.How would you compare the strings in script
+The test command is used to compare the text strings. The text command compares text strings by comparing each character in each string 
