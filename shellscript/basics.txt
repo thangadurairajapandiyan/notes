@@ -56,3 +56,10 @@ $? --> takes the result of last command executed
 
 13. If we dont want to print the output of command to screen/stdout, we can write the output to this file /dev/null
 ping -c1 8.8.8.8 &> /dev/null
+
+14. To print a value
+echo "This is my data"
+printf "Hello shellscript \n" --> we have to add \n in printf or else next command output will print in the same line
+
+15 To read data from user and store to variable
+read variable_name
