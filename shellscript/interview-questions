@@ -37,3 +37,15 @@ Intermediate:
 The test command is used to compare the text strings. The text command compares text strings by comparing each character in each string 
 
 10 How to redirect both the standard output and standard error to the same location
+command1 > out.txt 2> err.txt
+
+11 what are the default permisions of the file when it is created
+-rw-r--r-- 1
+
+12 Determine the output of the command
+echo ${new:-variable}
+output: variable
+Here new is the variable name, if this variable name is already defined, it will take that value, else it will pass this default value "variablbe" to the
+variable name "new" 
+
+13. 
