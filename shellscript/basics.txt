@@ -12,6 +12,10 @@ IFS='|'
 $@ expanded as "$1" "$2" "$3" ... "$n"
 $* expanded as "$1y$2y$3y...$n", where y is the value of IFS variable i.e. "$*" is one long string and $IFS act as an separator or token delimiters.
 
+$@ and $* are special command line arguments shell variables.
+The $@ holds list of all arguments passed to the script.
+The $* holds list of all arguments passed to the script.
+
 3. To print array
 ${array_name[*]}
 ${array_name[@]}
