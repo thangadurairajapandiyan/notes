@@ -1,0 +1,8 @@
+1 How to find the no of arguments passed
+$# --> will give the no of arguments passed while invoking the shellscript
+
+2 How to get the name of the shell script file inside the script
+$0 will give the script name
+
+3. How to know whether last command is executed successfully
+$? --> will return the status code of the last command executed
