@@ -6,3 +6,26 @@ $0 will give the script name
 
 3. How to know whether last command is executed successfully
 $? --> will return the status code of the last command executed
+
+4. How to get the last line from the file
+tail -1 file_name (By default tail file_name will return last 10 lines of file, if we pass -3 it will show the last three lines)
+
+5. How to get the first line from the file
+head -1 file_name (By default tail file_name will return first 10 lines of file, if we pass -3 it will show the first 3 lines)
+
+6. How to get third element from each line
+awk '{print $3}' filename
+ps -aux | awk '{print $3}'
+
+7. How to write a function in shell script
+#!/bin/sh
+# Define your function here
+Hello () {
+   echo "Hello World $1 $2"
+   return 10
+}
+# Invoke your function
+Hello Zara Ali
+# Capture value returnd by last command
+ret=$?
+echo "Return value is $ret"
