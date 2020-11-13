@@ -35,3 +35,8 @@ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
     /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install jenkins
+
+6. How the tenants(multiple customers/products) are isolated in single jenkins instance
+Using Folder concept(Folder plugin needs to be installed)
+Each tenant will be assigned with one Folder and the jobs are created under that Folder. The credentails are also created and managed in the folder itself
+We can restrict user to access particular Folder, so that other tenants folder will not be shown to the user
