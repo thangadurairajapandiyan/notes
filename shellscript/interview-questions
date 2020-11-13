@@ -48,4 +48,14 @@ output: variable
 Here new is the variable name, if this variable name is already defined, it will take that value, else it will pass this default value "variablbe" to the
 variable name "new" 
 
-13. 
+13.How to get part of the string with echo command only
+echo ${variable_name:2:6} where 2 is the staring index and 6 is the count of characters after the starting index
+
+14 Rewrite the commamd to print the sentence and convert the variable to plurla
+variable="plane"; echo "I like ${variable}s"
+output: I like planes
+
+15 To print the first array element
+#!/bin/bash
+array={"Hi", "my", "name", "is", "vignesh"}
+echo ${array[0]}
