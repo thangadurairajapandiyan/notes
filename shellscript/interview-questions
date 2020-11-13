@@ -30,7 +30,10 @@ Hello Zara Ali
 ret=$?  # For function it will return return_value, for others it will return status code
 echo "Return value is $ret"
 
+Intermediate:
 8. The history command cnnot be executed from bash shell script, but it will work in c shell
 
 9.How would you compare the strings in script
 The test command is used to compare the text strings. The text command compares text strings by comparing each character in each string 
+
+10 How to redirect both the standard output and standard error to the same location
