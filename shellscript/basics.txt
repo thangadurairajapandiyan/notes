@@ -46,3 +46,8 @@ tar -xvf file.tgz
 11 To compress and generate .tgz file
 tar -cvzf file_name.tgz folder_name/
 
+12. Special symbols in shellscript
+$? --> takes the result of last command executed
+
+13. If we dont want to print the output of command to screen/stdout, we can write the output to this file /dev/null
+ping -c1 8.8.8.8 &> /dev/null
