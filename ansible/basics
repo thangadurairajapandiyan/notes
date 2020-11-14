@@ -15,6 +15,9 @@ ansible-config list
 
 6. Executing the ansible module using command-line
 ansible host_name/group_name -m ping -i inventory.txt
+host_name/group_name --> from inventory file (/etc/ansible/hosts)
+-m ping --> module name (here module name ping is passed)
+-i inventory.txt --> To pass custom inventory file (Here incentory file named inventory.txt in current dirctory is passed)
 
 7. Host key checking can be disbaled/enabled by the following ways
 By default host_key_checking is enabled
