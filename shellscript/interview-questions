@@ -124,6 +124,22 @@ f --> file
 28 How can you pass parameters to the shell script ?
 ./script.sh param1 param2
 
+29 How to find all the files modified in less than 3 days and print the record count odf each?
+find . -type f -mtime -3 -exec ls -l {} \; > last3days.txt
+-type f --> search only for files
+-mtime -3 --> for last three days
 
+30  Throw a error message if 2 arguments are not passed
+if [ $# -ne 2]
+    echo "Enter two parameters"
+    
+Here $# will get the no of parameters passed
 
+31 Calculate a real number calculation directly from terminal and not any shell script
+echo 7.56 + 4.432 | bc
 
+32 How can you get the value of pi till a 100 decimal places
+echo "scale=100; 4*a(1)" | bc -l
+
+33 For debugging use set -x 
+will print the actual script and also the errors in the script
