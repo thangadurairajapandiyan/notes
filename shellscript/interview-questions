@@ -1,3 +1,5 @@
+Reference: https://www.youtube.com/watch?v=6ue2luv2I-Y&t=65s
+
 1 How to find the no of arguments passed
 $# --> will give the no of arguments passed while invoking the shellscript
 
@@ -87,6 +89,41 @@ tar --> tape archive
 tar -czvf folder_name --> for compressing and creating the package for particular folder
 tar -xzvf package_name --> for extracting the package
 
-21
+21 What are the diffrent commands avilable to check the disk usage
+df - This command is used to check the free disk space
+du - This command is used to check the directory wise disk space
+dfspace - This command is used to check the free disk space in term of MB
+
+22 what are the diffrent communication commands available in the shell?
+mail - whcih will call the mailbinary to send and read mails
+news - which is used to read the system wide news to standard output
+wall(write to all) -  It is used to send out shutdown messages to all users
+motd(message of the day) - 
+
+23 How to find out the totak disk space used by a specific user
+du -s/home/user_name
+
+24 How to debug the problems encountered in shell script/program?
+--> By adding logs
+--> By set -x
+
+25 what is the diffrence between = and == ?
+= --> used for assigning value to the variable
+== --> used for string comparison
+The = operator in test command or within [] will used for comparison
+
+26 How to open a read only file in a shell
+vi -R file_name
+
+27 How can the contents of a file inside the jar be read without extracting in a shell script?
+tar -tvf package_name.tar
+t --> table 0f contents
+v --> verbose
+f --> file
+
+28 How can you pass parameters to the shell script ?
+./script.sh param1 param2
+
+
 
 
