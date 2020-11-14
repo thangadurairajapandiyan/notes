@@ -26,4 +26,38 @@ In inventory file --> ansible_ssh_user=vagrant ansible_ssh_port=2222 ansible_ssh
 In ansible.cfg --> ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 As environment variable --> export ANSIBLE_HOST_KEY_CHECKING=False  (This might not work on newer ansible versions)
 
-8. 
+8. To save output to a variable and printing that variable
+- name: print to stdout
+  command: echo "hello"
+  register: out
+- debug: msg="{{ out.stdout }}"
+- debug: msg="{{ out.stderr }}"
+- debug: var=out.stdout_lines
+
+9. To install package based on distro/0s-family
+[Older way]
+- name: install the latest version of Apache on CentOS
+  yum: name=httpd state=latest
+  when: ansible_os_family == "RedHat"
+
+- name: install the latest version of Apache on Debian
+  apt: pkg=apache2 state=latest 
+  when: ansible_os_family == "Debian"
+  
+[Newer way]
+- name: Install foo
+  package: name=httpd state=latest
+  
+When the package name differs across OS families, we can handle it with distribution or OS family specific vars files:
+Here th packae name "httpd" is diffrent for distros, in Redhat it is "httpd", but for Ubuntu it is "apache2"
+---
+- hosts: all
+  remote_user: root
+  vars_files:
+    - "vars/common.yml"
+    - [ "vars/{{ ansible_os_family }}.yml", "vars/os_defaults.yml" ]
+  tasks:
+    - name: Install the apache package
+      package:
+        name: "{{ apache }}"
+        state: present
