@@ -13,4 +13,14 @@ finds first
 5. To list all options of ansible
 ansible-config list
 
-6. 
+6. Executing the ansible module using command-line
+ansible host_name/group_name -m ping -i inventory.txt
+
+7. Host key checking can be disbaled/enabled by the following ways
+By default host_key_checking is enabled
+In ansible.cfg --> host_key_checking = False
+In inventory file --> ansible_ssh_user=vagrant ansible_ssh_port=2222 ansible_ssh_host=127.0.0.1 host_key_checking=false
+In ansible.cfg --> ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+As environment variable --> export ANSIBLE_HOST_KEY_CHECKING=False  (This might not work on newer ansible versions)
+
+8. 
