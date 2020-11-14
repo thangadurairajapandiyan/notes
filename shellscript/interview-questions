@@ -59,3 +59,34 @@ output: I like planes
 #!/bin/bash
 array={"Hi", "my", "name", "is", "vignesh"}
 echo ${array[0]}
+
+16 To print all elements of array and its index
+echo ${array[@]} -- >Printing all array elements
+echo ${!array[@]} --> printing array index
+
+Experienced
+17 what is crontab
+The crontab is a list of commands that you want to run on a regular schedule and also the name of the command used to manage the list.
+--> Crontab stand for "cron table" because it uses the job schediler cron to execute the tasks
+--> The schedule is called the crontab, which is also the name of the program used to edit that schedule.
+
+18 How many fields are present in a crontab file and what does each feild specify?
+The crontab file has fix fields,
+--> The first five feilds tell cron when to execute the command : minute(0-59), hour(0-23, day(1-31),)
+month(1-12), and the day of the week (0-6) 0-sunday
+--> The sixth field contains the command to be executed
+
+19 what are the two files of crontab command ?
+--> cron.allow - It decides which users need to be permitted from using the crontab command
+--> cron.deny - It decides which users need to be prevented from using the crontab command
+Redhat/centos --> /var/spool/cron directory
+DEbian/ubuntu --> /cron/crontab directory
+
+20 what command needs to be used to take the backup?
+tar --> tape archive
+tar -czvf folder_name --> for compressing and creating the package for particular folder
+tar -xzvf package_name --> for extracting the package
+
+21
+
+
