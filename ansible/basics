@@ -1,0 +1,16 @@
+1. Dependency for using Ansible.
+Python should be installed in both ansible host and also in all target servers
+
+2. Where the default ansible configuration file and host/inventory file is located
+/etc/ansible/ansible.cfg
+
+3. How ansible will find the ansible configurations
+Ansible will read ANSIBLE_CONFIG, ansible.cfg in the current working directory, .ansible.cfg in the home directory, or /etc/ansible/ansible.cfg, whichever it
+finds first
+
+4. Nearly all parameters can be overridden in ansible-playbook or with command line flags.
+
+5. To list all options of ansible
+ansible-config list
+
+6. 
