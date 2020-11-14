@@ -61,3 +61,6 @@ Here th packae name "httpd" is diffrent for distros, in Redhat it is "httpd", bu
       package:
         name: "{{ apache }}"
         state: present
+
+10 From one handler we can notify the other handler, but the problem, it is not returning "True" it wont notify the other handlers. After ansible 2.3 version,
+the better way is to group the tasks inside "block" (block is also one module)
