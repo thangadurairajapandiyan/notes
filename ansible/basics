@@ -80,3 +80,11 @@ the next task
           register: resultStartingApache2
           when: result is succeeded
           
+11 Types of Inventories
+--> static inventory -- > All the Ip are defined in the staic file (/etc/ansible/hosts)
+--> Dynamic inventory --> It will fetch the Ip's dynamically using the python script/plugins
+Initially we have to write the python script and we have to pass like below for dynamic Inventory
+ansible-playbook -i inventory.py playbook.yaml
+
+Now this dynamic inventory is available as plugin
+
