@@ -1,3 +1,5 @@
+IMPORTANT: Use aws_ec2 plugin instead of this steps
+
 To use aws ec2 dynamic inventory, we have to download the ec2.py, ec2.ini from the anisble github repo to our ansible host machine  
 To run this python scripy we need one dependency module to be installed boto or boto3 (which is python module for aws)
 sudo pip install boto
