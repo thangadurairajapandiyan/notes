@@ -89,6 +89,6 @@ ansible-playbook -i inventory.py playbook.yaml
 Now this dynamic inventory scripts are already written for some cloud providers
 aws ec2, azure, openstack, gcp, space walk, jails etc..
 
-
+Update: use aws_ec2 plugin from amazon.aws collection
 
 
