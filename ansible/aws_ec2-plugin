@@ -1,0 +1,3 @@
+Reference:
+    https://medium.com/faun/learning-the-ansible-aws-ec2-dynamic-inventory-plugin-59dd6a929c7f#:~:text=Ansible%20comes%20with%20various%20dynamic,maintain%20a%20standard%20local%20inventory.
+    https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html
