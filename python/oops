@@ -6,7 +6,7 @@ Object Oriented Programming:
     
   why oops? --> to group related functions, To create template/blue print
   Inside the class the functions are called as methods and the methods will have first parameter as "self" and it can be any name 
-  while alling the methods in class, the "self" parameter will be assigned with the value "ovject_name" which we have created
+  while calling a methods in class, the "self" parameter will be assigned with the value "object_name" which we have created
   Inside a class, we can access one method variables in another methods
   we can access the variables inside the methods of class by object_name.variable_name from outside the class(eg. From main function)
   we can access the class variables by class_name.variable_name inside the method of a class
@@ -239,9 +239,9 @@ Object Oriented Programming:
   apa_ob.display()
 
   Encapsulation:
-    Using Encapsulation we can hide the variables and methods of the class. The variables and methods which are encapsulated can be accessed only inside the class. It cannot be
-    dierectly accessed from outside the class. The declare the variables and methods as encapsulation prefix the variable and method name with __ (eg. __variable_name,
-    __method_name())
+    Using Encapsulation we can hide the variables and methods of the class. The variables and methods which are encapsulated can be accessed only inside the class.
+    It cannot be dierectly accessed from outside the class. The declare the variables and methods as encapsulation prefix the variable and method name with __ 
+    (eg. __variable_name, __method_name())
   
   EXAMPLE: 9
   class Person(object):
@@ -262,8 +262,8 @@ Object Oriented Programming:
   #print(per1.__age)
 
   STATIC Methods in class:
-    Static methods cannot access the properties of the class itself. However, when you need a utility function that doesn't access any properties of a class but makes sense
-    that it belongs to the class, we use static functions.
+    Static methods cannot access the properties of the class itself. However, when you need a utility function that doesn't access any properties of a class
+    but makes sense that it belongs to the class, we use static functions.
     The static methods are decorated with "@staticmethod" above the method declaration inside the class
     It can be accessed without creating the object, class_name.static_method_name()
     
