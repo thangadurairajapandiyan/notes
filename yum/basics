@@ -14,3 +14,7 @@
   * Then place this file in this folder /etc/yum.repod.d/
   
 2. If you want to download only from jfrog artifact repository, delete all other files in /etc/yum.repod.d/
+
+3. Istall rpm package
+ yum -y localinstall java.rpm
+ yum -y localinstall https://url/java.rpm
