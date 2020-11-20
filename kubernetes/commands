@@ -11,3 +11,9 @@ kubectl delete sa/service_account_name -n namespace_name
 3. To get service account in all namespaces
 kubectl get sa --all-namespaces
 
+4. To know the taints applied to the node
+kubectl describe node node1 | grep -i taints -A5
+
+5. To delete a particular taint
+To remove a taint with key (eg. key = dedicated)
+kubectl taint nodes foo dedicated-
