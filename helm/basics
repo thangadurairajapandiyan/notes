@@ -29,6 +29,20 @@ HELM-3
   To get the config file(manifest) which we used during helm install
   helm get manifest release_name
   helm get manifest reease_name -n namespace_name
+
+  To add a helm chart repo
+  helm repo add [NAME] [URL] [flags]
+  helm repo add bitnami https://charts.bitnami.com/bitnami
+  
+  helm repo add - add a chart repository
+  helm repo index - generate an index file given a directory containing packaged charts
+  helm repo list - list chart repositories
+  helm repo remove - remove one or more chart repositories
+  helm repo update - update information of available charts locally from chart repositories
+  
+  To search helm charts in that repo
+  helm search repo repo-name (eg. helm search repo bitnami/)
+  To search for mongodb chart hem search repo bitnami/mango
   
   
 HELM-2
