@@ -5,4 +5,5 @@
   Ans: Remove the Taint in the master node
   
 3. Automatically taint (node.kubernetes.io/disk-pressure:NoSchedule) is assigned in the worker nodes
+  Info: node.kubernetes.io/disk-pressure: The node has disk pressure issues. This corresponds to the node condition DiskPressure=True.
   Ans: 
