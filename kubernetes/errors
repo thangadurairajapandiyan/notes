@@ -1,2 +1,8 @@
 1. Error: failed pre-install: job failed: DeadlineExceeded
   Ans: activeDeadlineSeconds: 30 in the Job is reached the limit
+
+2. Not able to schedule pods in node in a single node cluster
+  Ans: Remove the Taint in the master node
+  
+3. Automatically taint (node.kubernetes.io/disk-pressure:NoSchedule) is assigned in the worker nodes
+  Ans: 
