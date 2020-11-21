@@ -17,3 +17,6 @@ kubectl describe node node1 | grep -i taints -A5
 5. To delete a particular taint
 To remove a taint with key (eg. key = dedicated)
 kubectl taint nodes foo dedicated-
+
+6. To get information about the node
+kubectl describe node node_name
