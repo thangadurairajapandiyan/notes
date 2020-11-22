@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
     h.vm.box = "hashicorp/bionic64"
     h.vm.provider :virtualbox
 
-    **h.vm.disk :disk, size: "10GB", name: "extra_storage"**
+    h.vm.disk :disk, size: "10GB", name: "extra_storage"
   end
 end
 ```
