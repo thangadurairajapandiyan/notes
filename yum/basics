@@ -18,3 +18,7 @@
 3. Istall rpm package
  yum -y localinstall java.rpm
  yum -y localinstall https://url/java.rpm
+ 
+4. To install gcc and make
+yum groupinstall "Development Tools"
+or (yum install make gcc)
