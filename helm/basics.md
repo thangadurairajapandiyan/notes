@@ -16,7 +16,7 @@ In Helm 2, if no name was provided, a random name would be generated. Helm 3 wil
 * **Helm serve removed**
 Not many people used helm serve (which was used to run a local Chart Repository on your machine for development purposes) but for those who did — it’s removed now. Although you can still use it as a plugin instead.
 * **Namespaces are not created automatically anymore**
-When creating a release in a namespace that does not exist, Helm 2 would create it automatically. Helm 3 follows the behaviour of other Kubernetes tooling and returns an error if the namespace does not exist.
+When creating a release in a namespace that does not exist, Helm 2 would create it automatically. Helm 3 follows the behaviour of other Kubernetes tooling and returns an error if the namespace does not exist. Releases are persisted on a release namespace basis and not in the Tiller namespace anymore
 
 
 **Reference**
