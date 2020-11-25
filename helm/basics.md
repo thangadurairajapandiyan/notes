@@ -108,3 +108,4 @@
   "Ingress",
   "APIService"
   ```
+* The chart can be deprecated by specifying the "deprecated: true" in Charts.yaml
