@@ -1,9 +1,22 @@
 # Helm 2 to 3 migration commands
+* Install helm version 3 and rename the binary to helm3
 * Installing plugin
-``` 
-helm3 plugin install https://github.com/helm/helm-2to3
-```
-
+  ``` 
+  helm3 plugin install https://github.com/helm/helm-2to3
+  ```
+* Migrate Helm v2 configuration (Moves Chart starters, Repositories, Plugins)
+  ```
+  helm3 2to3 move config --dry-run
+  helm3 2to3 move config
+  ```
+* The plugin also supports non default Helm v2 home and Helm v3 config and data folders, an example of it's use:
+  ```
+  $ export HELM_V2_HOME=$HOME/.helm2
+  $ export HELM_V3_CONFIG=$HOME/.helm3
+  $ export HELM_V3_DATA=$PWD/.helm3
+  $ helm3 2to3 move config
+  ```
+  
 # HELM-3 commands
 * To install helm chart
 ```
