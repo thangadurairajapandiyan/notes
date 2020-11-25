@@ -109,3 +109,64 @@
   "APIService"
   ```
 * The chart can be deprecated by specifying the "deprecated: true" in Charts.yaml
+* Predefined Values
+  * Release.Name: The name of the release (not the chart)
+  * Release.Namespace: The namespace the chart was released to.
+  * Release.Service: The service that conducted the release.
+  * Release.IsUpgrade: This is set to true if the current operation is an upgrade or rollback.
+  * Release.IsInstall: This is set to true if the current operation is an install.
+  * Chart: The contents of the Chart.yaml. Thus, the chart version is obtainable as Chart.Version and the maintainers are in Chart.Maintainers.
+* "global" is a special variable to pass the values to dependency charts. 
+  * By default dependency chart cannot read values from parent root values
+  * we can pass valuses to dependency charts from parent values.yaml
+  ```
+  title: "My WordPress Site" # Sent to the WordPress template
+  
+  global:
+    app: MyWordPress
+
+  mysql: # Dependency chart name
+    max_connections: 100 # Sent to MySQL
+    password: "secret"
+
+  apache: # Dependency chart name
+    port: 8080 # Passed to Apache  
+  ```
+* The schema file "values.schema.json" in chart root folder is used the enforce the chart values (eg. string type for specific value in values.yaml)
+  ```
+  {
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "properties": {
+      "image": {
+        "description": "Container Image",
+        "properties": {
+          "repo": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "name": {
+        "description": "Service name",
+        "type": "string"
+      },
+      "port": {
+        "description": "Port",
+        "minimum": 0,
+        "type": "integer"
+      },
+      "protocol": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "protocol",
+      "port"
+    ],
+    "title": "Values",
+    "type": "object"
+  }
+  ```
