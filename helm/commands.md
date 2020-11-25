@@ -16,7 +16,7 @@ helm3 plugin install https://github.com/helm/helm-2to3
 ```  
   helm install -f myvalues.yaml myredis ./redis -n nemespace_name
 ```
-  we can pass multiple values.yaml or --set , but which is the rightmost will have the precedance
+*  we can pass multiple values.yaml or --set , but which is the rightmost will have the precedance
 ```  
   helm install -f myvalues.yaml -f override.yaml  myredis ./redis
 ```
@@ -59,7 +59,7 @@ helm3 plugin install https://github.com/helm/helm-2to3
 ```
   helm search repo repo-name (eg. helm search repo bitnami/)
 ```  
-  To search for mongodb chart 
+* To search for mongodb chart 
 ```  
   hem search repo bitnami/mango
 ```  
