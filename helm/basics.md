@@ -56,7 +56,7 @@
     ```
     # parentchart/values.yaml
 
-    subchart1:
+    subchart2:
       enabled: true
     tags:
       front-end: false
