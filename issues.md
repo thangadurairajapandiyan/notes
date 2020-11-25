@@ -6,4 +6,4 @@
 * Error: YAML parse error on cnf-pre-provisioning/templates/cnf-preprovisioning-preinstall-hook.yaml: error converting YAML to JSON: yaml: line 9: did not find expected key
   ##### Solution: 
   * Check the YAML syntax
-  * Check whether the space is there between the curly braces eg. WRONG { { .Values.data } } RIGHT {{ .Values.data }}
+  * Check whether the space is there between the first two opening curly braces eg. **WRONG** { { .Values.data } } **CORRECT** {{ .Values.data }}
