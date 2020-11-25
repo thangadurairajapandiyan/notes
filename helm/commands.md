@@ -1,3 +1,7 @@
+# Helm 2 to 3 migration commands
+* Installing plugin
+``` helm3 plugin install https://github.com/helm/helm-2to3 ```
+
 HELM-3
   To install helm chart
   helm install -f myvalues.yaml myredis ./redis
