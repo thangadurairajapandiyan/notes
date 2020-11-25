@@ -4,5 +4,5 @@
   * Info: default duration time to wait for any individual Kubernetes operation (like Jobs for hooks) (default 5m0s)
    
 * Error: YAML parse error on cnf-pre-provisioning/templates/cnf-preprovisioning-preinstall-hook.yaml: error converting YAML to JSON: yaml: line 9: did not find expected key
-  * Sol: 1. Check the YAML syntax
-         2. Check whether the space is there between the curly braces eg. WRONG { { .Values.data } } RIGHT {{ .Values.data }}
+  * Sol: * Check the YAML syntax
+         * Check whether the space is there between the curly braces eg. WRONG { { .Values.data } } RIGHT {{ .Values.data }}
