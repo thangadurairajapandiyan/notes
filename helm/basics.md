@@ -17,7 +17,12 @@ In Helm 2, if no name was provided, a random name would be generated. Helm 3 wil
 Not many people used helm serve (which was used to run a local Chart Repository on your machine for development purposes) but for those who did — it’s removed now. Although you can still use it as a plugin instead.
 * **Namespaces are not created automatically anymore**
 When creating a release in a namespace that does not exist, Helm 2 would create it automatically. Helm 3 follows the behaviour of other Kubernetes tooling and returns an error if the namespace does not exist. Releases are persisted on a release namespace basis and not in the Tiller namespace anymore
-
+* **hel search** now supports both local repository searches and making search queries against Artifact Hub
+* Chart apiVersion bumped to "v2" for following specification changes:
+    * Dynamically linked chart dependencies moved to Chart.yaml (requirements.yaml removed and requirements --> dependencies)
+    * Library charts (helper/common charts) can now be added as dynamically linked chart dependencies
+    * Charts have a type metadata field to define the chart to be of an application or library chart. It is application by default which means it is renderable         and installable
+    * Helm 2 charts (apiVersion=v1) are still installable
 
 **Reference**
 * https://itnext.io/helm2-vs-helm3-part-1-c76c29106e99
