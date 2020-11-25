@@ -132,7 +132,7 @@
   apache: # Dependency chart name
     port: 8080 # Passed to Apache  
   ```
-* The schema file "values.schema.json" in chart root folder is used the enforce the chart values (eg. string type for specific value in values.yaml)
+* The schema file "values.schema.json" in chart root folder is used the enforce the chart values, define a structure, make some valuse as required value (eg.       string type for specific value in values.yaml)
   ```
   {
     "$schema": "https://json-schema.org/draft-07/schema#",
@@ -170,3 +170,28 @@
     "type": "object"
   }
   ```
+* "template directives" or templating feature not avilable for CRD yaml files defined in crds/ folder
+  ```
+  kind: CustomResourceDefinition
+  metadata:
+    name: crontabs.stable.example.com
+  spec:
+    group: stable.example.com
+    versions:
+      - name: v1
+        served: true
+        storage: true
+    scope: Namespaced
+    names:
+      plural: crontabs
+      singular: crontab
+      kind: CronTab
+  ```
+* Limitations on CRDs
+  * Unlike most objects in Kubernetes, CRDs are installed globally. For that reason, Helm takes a very cautious approach in managing CRDs. CRDs are subject to the     following limitations:
+
+  * CRDs are never reinstalled. If Helm determines that the CRDs in the crds/ directory are already present (regardless of version), Helm will not attempt to         install or upgrade.
+  * CRDs are never installed on upgrade or rollback. Helm will only create CRDs on installation operations.
+    CRDs are never deleted. Deleting a CRD automatically deletes all of the CRD's contents across all namespaces in the cluster. Consequently, Helm will not           delete CRDs.
+* Chart Repositories
+  A repository is characterized primarily by the presence of a special file called index.yaml that has a list of all of the packages supplied by the repository,     together with metadata that allows retrieving and verifying those packages.
