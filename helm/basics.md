@@ -19,10 +19,30 @@ Not many people used helm serve (which was used to run a local Chart Repository 
 When creating a release in a namespace that does not exist, Helm 2 would create it automatically. Helm 3 follows the behaviour of other Kubernetes tooling and returns an error if the namespace does not exist. Releases are persisted on a release namespace basis and not in the Tiller namespace anymore
 * **hel search** now supports both local repository searches and making search queries against Artifact Hub
 * Chart apiVersion bumped to "v2" for following specification changes:
-    * Dynamically linked chart dependencies moved to Chart.yaml (requirements.yaml removed and requirements --> dependencies)
-    * Library charts (helper/common charts) can now be added as dynamically linked chart dependencies
-    * Charts have a type metadata field to define the chart to be of an application or library chart. It is application by default which means it is renderable         and installable
-    * Helm 2 charts (apiVersion=v1) are still installable
+   * Dynamically linked chart dependencies moved to Chart.yaml (requirements.yaml removed and requirements --> dependencies)
+   * Library charts (helper/common charts) can now be added as dynamically linked chart dependencies
+   * Charts have a type metadata field to define the chart to be of an application or library chart. It is application by default which means it is renderable          and installable
+   * Helm 2 charts (apiVersion=v1) are still installable
+* XDG directory specification added:
+   * Helm home removed and replaced with XDG directory specification for storing configuration files
+   * No longer need to initialize Helm
+   * helm init and helm home removed
+* local or stable repositories are not set-up by default
+* crd-install hook removed and replaced with crds directory in chart where all CRDs defined in it will be installed before any rendering of the chart
+* test-failure hook annotation value removed, and test-success deprecated. Use test instead
+* Commands removed/replaced/added:
+   * delete --> uninstall : removes all release history by default (previously needed --purge)
+   * fetch --> pull
+   * home (removed)
+   * init (removed)
+   * install: requires release name or --generate-name argument
+   * inspect --> show
+   * reset (removed)
+   * serve (removed)
+   * template: -x/--execute argument renamed to -s/--show-only
+   * upgrade: Added argument --history-max which limits the maximum number of revisions saved per release (0 for no limit)
+* Helm 3 Go library has undergone a lot of changes and is incompatible with the Helm 2 library
 
 **Reference**
 * https://itnext.io/helm2-vs-helm3-part-1-c76c29106e99
+* https://helm.sh/docs/topics/v2_v3_migration/
