@@ -11,11 +11,27 @@
   ```
 * The plugin also supports non default Helm v2 home and Helm v3 config and data folders, an example of it's use:
   ```
-  $ export HELM_V2_HOME=$HOME/.helm2
-  $ export HELM_V3_CONFIG=$HOME/.helm3
-  $ export HELM_V3_DATA=$PWD/.helm3
-  $ helm3 2to3 move config
+  export HELM_V2_HOME=$HOME/.helm2
+  export HELM_V3_CONFIG=$HOME/.helm3
+  export HELM_V3_DATA=$PWD/.helm3
+  helm3 2to3 move config
   ```
+* Migrate Helm v2 releases
+  ```
+  helm3 2to3 convert Release_name  (now release information is available in both version 2 and 3)
+  helm3 2to3 convert Release_name --delete-v2-releases (To delete information in helm 2)
+  If you are using Tillerless Helm v2, just add --tiller-out-cluster to migrate the release:
+  helm3 2to3 convert postgres --tiller-out-cluster
+  ```
+* Clean up of Helm v2 data (Configuration (Helm home directory), v2 release data, Tiller deployment)
+  ```
+  helm3 2to3 cleanup --dry-run
+  if you are using Tillerless Helm v2, just add --tiller-out-cluster to clean up Helm v2 data.
+  The plugin also supports non default Helm v2 home data folder and Tiller releases namespace
+  export HELM_V2_HOME=$PWD/.helm2
+  helm 2to3 cleanup --tiller-ns some_namespace
+  ```
+  
   
 # HELM-3 commands
 * To install helm chart
