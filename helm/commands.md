@@ -61,7 +61,14 @@ helm3 plugin install https://github.com/helm/helm-2to3
 ```  
 * To search for mongodb chart 
 ```  
-  hem search repo bitnami/mango
+  helm search repo bitnami/mango
 ```  
-  
+* To install helm plugin
+  ```
+  helm plugin install https://github.com/helm/helm-2to3
+  ```
+* To list installed plugin
+  ```
+  helm plugin lsit
+  ```
 # HELM-2
