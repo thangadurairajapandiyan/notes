@@ -16,6 +16,8 @@
 2. If you want to download only from jfrog artifact repository, delete all other files in /etc/yum.repod.d/
 
 3. Istall rpm package
+localinstall is used till Redhat5 version and this is no more required, kept for backward support. Till Redhat5 the "yum install" will install the packages from repos and
+localinstall is used to install the locall rpm files. In Redhat 6 & &, we can install the both repo packages and loca rpm file using same "yum install" command 
  yum -y localinstall java.rpm
  yum -y localinstall https://url/java.rpm
  
