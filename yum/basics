@@ -18,7 +18,7 @@
 3. Istall rpm package
 localinstall is used till Redhat5 version and this is no more required, kept for backward support. Till Redhat5 the "yum install" will install the packages from repos and
 localinstall is used to install the locall rpm files. In Redhat 6 & &, we can install the both repo packages and loca rpm file using same "yum install" command
-From Redhat8 its changed to "dnf install" and the "dnf localistall" is simply an alias of "dnf install"
+From Redhat8 its changed to "dnf install" and the "dnf localinstall" is simply an alias of "dnf install"
  yum -y localinstall java.rpm
  yum -y localinstall https://url/java.rpm
  
