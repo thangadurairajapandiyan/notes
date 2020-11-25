@@ -71,4 +71,4 @@
   ```
   helm install --set tags.front-end=true --set subchart2.enabled=false
   ```
-* we can get/import the valuse from child values.yaml to parent values.yaml. If the child values are alreday present in parent values.yaml, it will be overwriitrn in parent values.yaml `https://helm.sh/docs/topics/charts/#chart-dependencies` 
+* we can get/import the valuse from child values.yaml to parent values.yaml. If the child values are alreday present in parent values.yaml, it will be overwriitrn in parent values.yaml https://helm.sh/docs/topics/charts/#chart-dependencies 
