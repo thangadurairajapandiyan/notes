@@ -71,4 +71,40 @@
   ```
   helm install --set tags.front-end=true --set subchart2.enabled=false
   ```
-* we can get/import the valuse from child values.yaml to parent values.yaml. If the child values are alreday present in parent values.yaml, it will be overwriitrn in parent values.yaml https://helm.sh/docs/topics/charts/#chart-dependencies 
+* we can get/import the valuse from child values.yaml to parent values.yaml. If the child values are alreday present in parent values.yaml, it will be overwriitrn in parent values.yaml https://helm.sh/docs/topics/charts/#chart-dependencies
+* Helm creates kubernetes resources in the following order and uninstall its in reverse order,
+  ```
+  "Namespace",
+  "NetworkPolicy",
+  "ResourceQuota",
+  "LimitRange",
+  "PodSecurityPolicy",
+  "PodDisruptionBudget",
+  "Secret",
+  "ConfigMap",
+  "StorageClass",
+  "PersistentVolume",
+  "PersistentVolumeClaim",
+  "ServiceAccount",
+  "CustomResourceDefinition",
+  "ClusterRole",
+  "ClusterRoleList",
+  "ClusterRoleBinding",
+  "ClusterRoleBindingList",
+  "Role",
+  "RoleList",
+  "RoleBinding",
+  "RoleBindingList",
+  "Service",
+  "DaemonSet",
+  "Pod",
+  "ReplicationController",
+  "ReplicaSet",
+  "Deployment",
+  "HorizontalPodAutoscaler",
+  "StatefulSet",
+  "Job",
+  "CronJob",
+  "Ingress",
+  "APIService"
+  ```
