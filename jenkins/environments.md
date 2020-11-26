@@ -80,6 +80,20 @@
     ```
   * Overriding the value in script block **will not have any effect**
     ```
-    
+    pipeline {
+        agent any
+        environment {
+            USER_NAME = "vignesh"
+            USER_ID = 23 // All the environment variable are casted to string
+        }
+        stage ("Overriding in script block") {
+            steps {
+                script {
+                    env.USER_NAME = "vijay"  // will not have any effect
+                }
+                echo "USER_NAME = ${env.USER_NAME}"
+            }
+        }
+    }
     ```
   
