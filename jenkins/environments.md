@@ -96,4 +96,22 @@
         }
     }
     ```
+  * Overriding the value in withEnv block
+    ```
+    pipeline {
+        agent any
+        environment {
+            USER_NAME = "vignesh"
+            USER_ID = 23 // All the environment variable are casted to string
+        }
+        stage ("Overriding with withEnv block") {
+            steps {
+                withEnv(["USER_NAME=Panda"]) {
+                    echo "USER_NAME = ${env.USER_NAME}" // will print Panda
+                }
+                echo "USER_NAME = ${env.USER_NAME}" // will print value "vignesh" from pipeline environment block
+            }
+        }
+    }
+    ```
   
