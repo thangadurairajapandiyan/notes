@@ -65,6 +65,14 @@
   ```
   helm plugin lsit
   ```
+* To add helm offical stable repo
+  ```
+  helm repo add stable https://charts.helm.sh/stable
+  ```
+* To download only the values.yaml from chart
+  ```
+  helm inspect values repo_name/chart_name > /tmp/values.yam (eg. helm inspect values stable/jenkins > /tmp/values.yaml)
+  ```
 
 # Helm 2 to 3 migration commands
 * Install helm version 3 and rename the binary to helm3
