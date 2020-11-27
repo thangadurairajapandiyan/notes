@@ -1,14 +1,14 @@
 # sed -> stream editor
 
-# To delete a second line
+## To delete a second line
   ```
   sed -e '2d' /etc/passwd
   ```
-# To delete all line
+## To delete all line
   ```
   sed -e 'd' /etc/passwd
   ```
-# For replace a word in a file
+## For replace a word in a file
   ```
   sed "s/new_value/existing_value/" filename --> This will only change the output printing to screen not the actual file and it will only replace the first occurance
   s --> substitution
