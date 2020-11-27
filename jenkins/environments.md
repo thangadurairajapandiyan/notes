@@ -114,4 +114,47 @@
         }
     }
     ```
-  
+* Using env vaibale as boolean
+  * The env varibale is actually a string, so it wont work or we have to check like this (env.TRIGGER_NEXT == "true"), "true" as string
+    ```
+    stage ("Using env vaibale as boolean (not working)") {
+        when {
+            expression {
+                // Here the env.TRIGGER_NEXT is actually "true" (string) so the condition is false
+                env.TRIGGER_NEXT == true
+            }
+        }
+        steps {
+            echo "OK"
+        }
+    }
+    ```
+  * Converting string to Boolean value (not the suggested way)
+    ```
+    stage ("Converting string to boolean") {
+        when {
+            expression {
+                env.TRIGGER_NEXT.toBoolean() == true
+            }
+        }
+        steps {
+            echo "OK"
+        }
+    }
+    ```
+  * Using environment as condition
+    ```
+    stage ("Using environment as condition") {
+        environment {
+            TRIGGER_NEXT = "true" // true as string in double quotes
+        }
+        when {
+            expression {
+                environment name: "TRIGGER_NEXT", value: "true"
+            }
+        }
+        steps {
+            echo "OK"
+        }
+    }
+    ```
