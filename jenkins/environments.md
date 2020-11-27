@@ -158,3 +158,28 @@
         }
     }
     ```
+* Storing scrit output to environment variable
+  * using sh step block simply
+    ```
+    stage ("Storing sh step output to environment variable") {
+        environment {
+            // sh step by default will not return any value
+            FILES_COUNT = sh "ls -al /tmp | wc -l" 
+        }
+        steps {
+            echo "The tmp folder has ${FILES_COUNT} files"
+        }
+    }
+    ```
+  * using sh step block with parameters
+    ```
+    stage ("Storing sh step with parameters output to environment variable") {
+        environment {
+            FILES_COUNT = sh (script: "ls -al /tmp | wc -l", returnStdout: true) 
+        }
+        steps {
+            echo "The tmp folder has ${FILES_COUNT} files"
+        }
+    }
+    ```
+  
