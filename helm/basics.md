@@ -1,4 +1,9 @@
 # Helm Chart Basics
+* By default, helm will not have the repos added,
+  we have to add the helm official repo like this,
+  ```
+  helm repo add stable https://charts.helm.sh/stable
+  ```
 
 * In Helm chart we can define the dependency helm charts, while installing the parent helm chart the dependencies are downloaded from repos and stored in charts/ folder. We can also manually download and put the chart.tgz in charts/ folder
   * Defining the dependency helm chart in parent Charts.yaml
