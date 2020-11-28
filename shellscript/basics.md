@@ -1,4 +1,5 @@
-1.
+# Shell Script Basics
+
 $(command) or `command`– the command substitution
 ${variable_name} or $variable_name – the parameter substitution/variable expansion
 
