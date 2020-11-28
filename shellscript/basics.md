@@ -65,8 +65,16 @@ printf "Hello shellscript \n" --> we have to add \n in printf or else next comma
 15 To read data from user and store to variable
 read variable_name
 
-## To store command error to variable
+### To store command error to variable
 Here helm is not installed it will return error status, so by default the error message printed to stdout and not stored to variable
 ```
 helm_cmd_output=$(helm 2>&1)
+```
+
+### To check the command executed is correct or not
+```
+output=`helm --version`
+if [[ $? != 0 ]]; then
+    echo success
+fi
 ```
