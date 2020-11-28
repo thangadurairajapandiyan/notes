@@ -71,10 +71,11 @@ Here helm tool is not installed it will return error status, so by default the e
 helm_cmd_output=$(helm 2>&1)
 ```
 
-### To check the command executed is correct or not
+### To check the command is executed successfully or not
 Here helm tool is not installed it will return error status
 ```
-if [[ `helm --version` != 0 ]]; then
-    echo success
+helm version
+if [[ $? != 0 ]]; then
+    curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 fi
 ```
