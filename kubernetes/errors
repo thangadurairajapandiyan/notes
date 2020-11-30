@@ -10,4 +10,5 @@
   
 4. If the kubectl commands are not working, check the kube-apiserver is running or not. In kubeadm to analyse the logs of kubapi-server and etcd containers.
   docker logs container_id (kubeapiserver, etcd container)
-  If the etcd datas are corrupted. Delete the member folder folder /var/lib/etcd/member/ and restart the etcd container (But all the kubernetes objects which was created before are lost. If we have a backup of member folder we can replace there and restart the container)
+  If the etcd datas are corrupted. Delete the member folder folder /var/lib/etcd/member/ and restart the etcd container (But all the kubernetes objects which was created before     are lost. If we have a backup of member folder we can replace there and restart the container)
+  Generally etcd database corrupted due to power failure of the hardware/pc
