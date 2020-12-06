@@ -11,3 +11,6 @@ Will execute the the .tf file and create, delete or modify the resource mentione
 
 ### terraform destroy
 Will destroy the resources defined in .tf, if it was created before using terrform apply
+
+### To skip typing 'yes' during terraform apply and destroy
+terraform apply --auto-approve
