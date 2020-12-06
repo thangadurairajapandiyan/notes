@@ -1,6 +1,5 @@
-# Terraform
+# Terraform commands
 
-# Commands
 ### terraform init
 will read the .tf files, and download the providers mentioned in the .tf files
 
