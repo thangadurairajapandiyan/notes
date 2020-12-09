@@ -22,7 +22,7 @@ Note:
     $ --> End of the string and newline character incase of multiline string
     learn$ --> $ helps in returnig the last occurance of the string "learn"
     \b --> Empty string at the beginning or end of the word
-    \\blearn  --> Generally \b is for backspace so we have to put \\b Here it will returen learn string which has space in beginning of string
+    \\blearn  --> Generally \b is for backspace so we have to put \\b Here it will return learn string which has space in beginning of string
     Instead of \\b we can use r"\blearn" r"" means raw string it will skip the special characters
     \B --> Empty string not at the beginning or end of the string
     \t, \n, \r --> Matches tab, new line and carriage return respectively
