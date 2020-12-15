@@ -16,7 +16,6 @@ For pods in diffrent namespace (eg. namespace name - test)
 nameserver 10.96.0.10
 search test.svc.cluster.local svc.cluster.local cluster.local
 options ndots:5
-
 ```
 
 Similary for another namespace we have created service named postgres, we can refer the service in that namespace by simply calling the service name `curl postgres` this will be automatically expanded to postgres.test.svc.cluster.local. This is because in each namespace the namespace name will be added in /etc/resolv.conf and using this we can call any service in that namespace by simply calling the service name.
