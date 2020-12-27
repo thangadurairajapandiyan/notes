@@ -9,4 +9,7 @@ scp -p mygerrit:hooks/commit-msg .git/hooks/
 If you are amending the change created the new change-id will not be craeted, instaed patch set 2 will be craeted in the same change published.
 If you did not amend and push, it will be craeted as new change and the new commit-id will be created.
 
+### To push directly to branch, bypassing the code-review proccess
+git push origin branch_name (eg: git push origin master)
+To push directly to master you need a proper access.
 
