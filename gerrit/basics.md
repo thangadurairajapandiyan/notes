@@ -13,3 +13,7 @@ If you did not amend and push, it will be craeted as new change and the new comm
 git push origin branch_name (eg: git push origin master)
 To push directly to master you need a proper access.
 
+### To add permissions to push directly to branch without code-review process
+1. Craete a Group and add users to that group
+
+
