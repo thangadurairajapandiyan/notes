@@ -15,8 +15,11 @@ To push directly to master you need a proper access.
 
 ### To add permissions to push directly to branch without code-review process
 1. Create a Group and add users to that group
-![Adding user to group](https://github.com/vigneshsweekaran/notes/blob/master/gerrit/gerrit-adding-users-to-group.PNG)
+![Adding user to group](https://github.com/vigneshsweekaran/notes/blob/master/gerrit/images/gerrit-adding-users-to-group.PNG)
 
 2. Give push permissions to that group, add the group name under push in refs/heads/*
-![add-user-to-group](https://github.com/vigneshsweekaran/notes/blob/master/gerrit/add-permissions-to-group.PNG)
+![add-user-to-group](https://github.com/vigneshsweekaran/notes/blob/master/gerrit/images/add-permissions-to-group.PNG)
+
+3. To give read access to projects for new user, add the user to the group, add te group to read access in refs/*
+![to-give-read-access-to-projects](https://github.com/vigneshsweekaran/notes/blob/master/gerrit/images/to-provide-read-access-to-projects.PNG)
 
