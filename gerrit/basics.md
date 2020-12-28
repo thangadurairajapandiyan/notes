@@ -17,3 +17,6 @@ To push directly to master you need a proper access.
 1. Create a Group and add users to that group
 ![Adding user to group](https://github.com/vigneshsweekaran/notes/blob/master/gerrit/gerrit-adding-users-to-group.PNG)
 
+2. Give push permissions to that group
+!()
+
