@@ -92,3 +92,6 @@ if [[ $? != 0 ]]; then
     curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 fi
 ```
+
+### redirecting
+https://www.brianstorti.com/understanding-shell-script-idiom-redirect/
