@@ -1,11 +1,11 @@
 # Shell Script Basics
-* Brackets
+### Brackets
 
 $(command) or \`command\` – the command substitution
 
 ${variable_name} or $variable_name – the parameter substitution/variable expansion
 
-* IFS - Internal Field Separator
+### IFS - Internal Field Separator
 The IFS is a special shell variable.
 You can change the value of IFS as per your requirments.
 The Internal Field Separator (IFS) that is used for word splitting after expansion and to split lines into words with the read builtin command.
