@@ -1,11 +1,11 @@
 # Shell Script Basics
-1. Brackets
+* Brackets
 
 $(command) or \`command\` – the command substitution
 
 ${variable_name} or $variable_name – the parameter substitution/variable expansion
 
-2. IFS - Internal Field Separator
+* IFS - Internal Field Separator
 The IFS is a special shell variable.
 You can change the value of IFS as per your requirments.
 The Internal Field Separator (IFS) that is used for word splitting after expansion and to split lines into words with the read builtin command.
@@ -19,27 +19,27 @@ $@ and $* are special command line arguments shell variables.
 The $@ holds list of all arguments passed to the script.
 The $* holds list of all arguments passed to the script.
 
-3. To print array
+* To print array
 ${array_name[*]}
 ${array_name[@]}
 
-4. For loop
+* For loop
 #!/bin/sh
 for i in 1 2 3 4 5
 do
   echo "Looping ... number $i"
 done
 
-5. source file_name
+* source file_name
 The source command can be used to load any functions file into the current shell script or a command prompt.
 
-6. To check file exits or not
+* To check file exits or not
 [ -e FILE ] True if FILE exists.
 This will return true for both /etc/hosts and /dev/null and for directories.
 [ -f FILE ] True if FILE exists and is a regular file. This will return true for /etc/hosts and false for /dev/null (because it is not a regular file),
 and false for /dev since it is a directory.
 
-7. To get filename without extension
+* To get filename without extension
 $(basename $PACKAGE_NAME .tgz)
 
 8. To encode base64
