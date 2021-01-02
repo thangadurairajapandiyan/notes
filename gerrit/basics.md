@@ -11,8 +11,8 @@ For each change created the one change-id will be created along with the commit 
 ```
 scp -p mygerrit:hooks/commit-msg .git/hooks/
 ```
-If you are amending the change created the new change-id will not be craeted, instaed patch set 2 will be craeted in the same change published.
-If you did not amend and push, it will be craeted as new change and the new commit-id will be created.
+If you are amending the change created the new change-id will not be created, instead patch set 2 will be created in the same change published.
+If you did not amend and push, it will be created as new change and the new commit-id will be created.
 
 ### To push directly to branch, bypassing the code-review proccess
 git push origin branch_name (eg: git push origin master)
@@ -31,4 +31,4 @@ To push directly to master you need a proper access.
 ### To make some branch as default (eg. master branch)
 Edit the HEAD branch and update the value to master and save. After this by default git clone will download the master branch
 
-
+### Important: after adding the gerrit instance to jenkins, restart the jenkins server to take effect
