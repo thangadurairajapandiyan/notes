@@ -1,6 +1,6 @@
 # Gerrit
 ### Reference
-https://plugins.jenkins.io/gerrit-trigger/
+Jenkins gerrit trigger: https://plugins.jenkins.io/gerrit-trigger/
 
 ### To create a change and push for code review
 git push origin HEAD:refs/for/branch_name (eg: git push origin HEAD:refs/for/master) The branch should be already created in remote repository.
