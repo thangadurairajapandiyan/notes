@@ -2,6 +2,7 @@
 ### Reference
 Jenkins build trigger : 
 * https://nofluffjuststuff.com/magazine/2016/06/understanding_and_applying_gerrit_part_4_integrating_jenkins_with_gerrit
+* https://nofluffjuststuff.com/magazine/2016/10/understanding_and_applying_gerrit_part_5_doing_verification_builds_with_jenkins
 * https://plugins.jenkins.io/gerrit-trigger/
 
 ### To create a change and push for code review
