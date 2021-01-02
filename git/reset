@@ -1,4 +1,4 @@
-1. To reset one top local commit
+1. To reset one top local commit (This will only remove the commits and the chnages are still shown in local repository, we have to manaually remove the chnages)
   git reset HEAD^1 OR git reset HEAD^
   
   To reset top two commits
@@ -12,4 +12,5 @@
   OR
   git reset HEAD@{index_no} (index_no from reflog)
   
-  
+2. To reset the commit and remove the chnages
+git reset --hard HEAD^
