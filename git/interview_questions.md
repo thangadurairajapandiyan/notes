@@ -14,4 +14,7 @@ switch to the merging branch(base branch from where the feature branch was creat
 ### After merging whether it will create a seperate commit ?
 If there is no commits in the merging branch(from the point the feature branch was created or from the last merge from the same branch), it wont create a new commit(commits from feature branch will be merged to master branch), which is called fast-forward merging.
 
-If commits happend in the merging branch, then while merging it will create additional one commit(commits from feature branch + one additional commit for merging) 
+If commits happend in the merging branch, then while merging it will create additional one commit(commits from feature branch + one additional commit for merging) This is referred as 3-way-merge.
+
+http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
