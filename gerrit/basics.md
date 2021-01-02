@@ -28,5 +28,6 @@ To push directly to master you need a proper access.
 ![to-give-read-access-to-projects](https://github.com/vigneshsweekaran/notes/blob/master/gerrit/images/to-provide-read-access-to-projects.PNG)
 
 ### To make some branch as default (eg. master branch)
-Edit the HEAD branch and update the value to master and save
+Edit the HEAD branch and update the value to master and save. After this by default git clone will download the master branch
+
 
