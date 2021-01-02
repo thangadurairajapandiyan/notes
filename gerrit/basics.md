@@ -4,6 +4,7 @@ Jenkins build trigger :
 * https://nofluffjuststuff.com/magazine/2016/06/understanding_and_applying_gerrit_part_4_integrating_jenkins_with_gerrit
 * https://nofluffjuststuff.com/magazine/2016/10/understanding_and_applying_gerrit_part_5_doing_verification_builds_with_jenkins
 * https://plugins.jenkins.io/gerrit-trigger/
+Gerrit Merge Types: https://nofluffjuststuff.com/magazine/2016/04/understanding_and_applying_gerrit_part_3_gerrit_submit_types_and_git_review
 
 ### To create a change and push for code review
 git push origin HEAD:refs/for/branch_name (eg: git push origin HEAD:refs/for/master) The branch should be already created in remote repository.
