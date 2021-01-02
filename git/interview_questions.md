@@ -11,4 +11,6 @@
 ### How do you do the merge of feature branch and from which branch ?
 switch to the merging branch(base branch from where the feature branch was created, mostly master branch), then run `git merge feature(branch_name)`
 
-### After merging whether it will craete a seperate commit ?
+### After merging whether it will create a seperate commit ?
+If there is no commits in the merging branch(from the point the feature branch was created or from the last merge from the same branch), it wont create a new commit, which is called fast-forward merging.
+
