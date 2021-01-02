@@ -27,3 +27,6 @@ To push directly to master you need a proper access.
 3. To give read access to projects for new user, add the user to the group, add te group to read access in refs/*
 ![to-give-read-access-to-projects](https://github.com/vigneshsweekaran/notes/blob/master/gerrit/images/to-provide-read-access-to-projects.PNG)
 
+### To make some branch as default (eg. master branch)
+Edit the HEAD branch and update the value to master and save
+
