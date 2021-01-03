@@ -25,3 +25,6 @@ From Redhat8 its changed to "dnf install" and the "dnf localinstall" is simply a
 4. To install gcc and make
 yum groupinstall "Development Tools"
 or (yum install make gcc)
+
+5. To install useradd and adduser in centos 7 docker Image
+yum install shadow-utils
