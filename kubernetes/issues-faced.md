@@ -32,3 +32,9 @@ Add security context as below in pod templtae
 securityContext:
     runAsUser: 1000
 ```
+
+### Pod craetion failed with error
+```
+Error from server (Forbidden): pods "nginx" is forbidden: failed quota: cp0190ns01-rq: must specify limits.cpu,limits.memory,requests.cpu,requests.memory
+```
+Solution: Define resource request and limits in yaml file
