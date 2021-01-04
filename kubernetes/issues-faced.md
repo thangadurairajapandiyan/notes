@@ -20,9 +20,15 @@ If we have a backup of member folder we can replace there and restart the contai
 
 Generally etcd database corrupted due to power failure of the hardware/pc
 
-### Pod craetion failed with error
+### Pod creation failed with error
 ```
 Warning  Failed     2s (x4 over 36s)  kubelet            Error: container has runAsNonRoot and image has non-numeric user (agent), cannot verify user is non-root
 ```
 
 This is because the Pod security is not allowing to run the contaier as root user and not able to verify the whether the user is non-root
+
+Add security context as below in pod templtae
+```
+securityContext:
+    runAsUser: 1000
+```
