@@ -4,4 +4,4 @@
 ### What is Taints and Tolerations ?
 ### What is cordan and uncordan
 ### How to manauly move a pod from one node to another Node ?
-### 
+### How the changes updated in configmap, updated to pod, who is doing it ?
