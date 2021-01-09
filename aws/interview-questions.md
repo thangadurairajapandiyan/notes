@@ -32,3 +32,9 @@ S3: An object store, Great for storing logs
 ```
 ### How to copy an AMI from one Account to another account
 AMI is region scoped. whenever we create a AMI from EC2 instance it will create an AMI+snapshot. From the AMI we have a copy option to copy the AMI to another Region, in the anonther region AMI+snapshot will be created 
+
+### what is ACM
+
+### what is KMS
+
+### what is AWS guardduty
