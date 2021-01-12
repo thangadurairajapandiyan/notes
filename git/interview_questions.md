@@ -18,3 +18,7 @@ If commits happend in the merging branch, then while merging it will create addi
 
 http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
+### How to recover a deleted branch using sha value
+
+### How to drop a stash created
+git stash drop
