@@ -1,12 +1,14 @@
-Reference: https://www.youtube.com/watch?v=6ue2luv2I-Y&t=65s
+# Interview Questions
 
-1 How to find the no of arguments passed
+### Reference: https://www.youtube.com/watch?v=6ue2luv2I-Y&t=65s
+
+### How to find the no of arguments passed
 $# --> will give the no of arguments passed while invoking the shellscript
 
-2 How to get the name of the shell script file inside the script
+### How to get the name of the shell script file inside the script
 $0 will give the script name
 
-3. How to know whether last command is executed successfully
+###How to know whether last command is executed successfully
 $? --> will return the status code of the last command executed
 
 4. How to get the last line from the file
@@ -143,3 +145,5 @@ echo "scale=100; 4*a(1)" | bc -l
 
 33 For debugging use set -x 
 will print the actual script and also the errors in the script
+
+### Convert this format using shell script (YYYYMMDD -> 1st jan 2021)
