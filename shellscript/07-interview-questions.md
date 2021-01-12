@@ -147,3 +147,7 @@ echo "scale=100; 4*a(1)" | bc -l
 will print the actual script and also the errors in the script
 
 ### Convert this format using shell script (YYYYMMDD -> 1st jan 2021)
+```
+date +'%d %b %Y'
+12 Jan 2021
+```
