@@ -12,7 +12,7 @@ username --> can be anything
 pipelineid --> For each pipeline created in azure devops organization one unique id will be assigned and it will be a number (eg: 2)
 
 ** To Get the pipeline details**
-curl -d '{"definition":{"id":"3"}}' -H "Content-type: application/json" -X POST -u vigneshsweekaran:AZP_TOKEN https://dev.azure.com/vigneshsweekaran/test/_apis/pipelines/2/runs?api-version=6.0-preview.1
+curl -X GET -u vigneshsweekaran:AZP_TOKEN https://dev.azure.com/vigneshsweekaran/test/_apis/pipelines/2/runs/76?api-version=6.0-preview.1
 
 username --> can be anything
 
