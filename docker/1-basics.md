@@ -31,3 +31,15 @@ cat ~./docker/config.json
         "stackOrchestrator": "swarm"
 }
 ```
+cat ~./docker/daemon.json  (for reference)
+```
+{
+  "registry-mirrors": [],
+  "insecure-registries": [],
+  "debug": false,
+  "experimental": false,
+  "features": {
+    "buildkit": true
+  }
+}
+```
