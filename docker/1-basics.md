@@ -17,3 +17,17 @@ docker stats
 
 ### To change the docker registry details for login from the host
 Update the ~./docker/config.json
+
+cat ~./docker/config.json
+```
+{
+        "auths": {
+                "https://index.docker.io/v1/": {}
+        },
+        "HttpHeaders": {
+                "User-Agent": "Docker-Client/19.03.13 (windows)"
+        },
+        "credsStore": "desktop",
+        "stackOrchestrator": "swarm"
+}
+```
