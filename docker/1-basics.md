@@ -14,3 +14,6 @@ docker inspect container_name/id
 
 ### To know the statistics like ram and cpu consumed by each container
 docker stats
+
+### To change the docker registry details for login from the host
+Update the ~./docker/config.json
