@@ -5,7 +5,8 @@ Contains app binaries and dependencies. Not a complete OS. No kernel, kernal mos
 * Each layer in the docker image will have a unique sha256 value
 
 ### To know the layers of docker image
-docker history nginx or docker image history nginx
+docker history nginx **or** docker image history nginx
 
-### 
+### To see metadata of the docker image
+docker inspect nginx **or** docker image inspect nginx
 
