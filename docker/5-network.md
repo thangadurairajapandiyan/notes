@@ -3,6 +3,7 @@
 ### Notes
 * We can attach more than one networks to container
 * We can dynamically attach and remove the additional networks
+* Container craeted with host network connect attach any othetr additional networks
 
 ### List networks available
 docker network ls
