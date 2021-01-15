@@ -7,6 +7,8 @@
 * If we remove the default bridge network from the container, container can still run without any network.
 * Container with "none" network is different from container without any network
 * containers in the same network can talk to each other using the container name. This is possible because of DNS resolution handled by docker
+* Only With default bridge network, DNS resolution will not work, so that the containers cannot talk to each other, we have to use --link to link the containers we want to talk.
+* DNS resolution perfectly works with the newly created network and the containers in that network can talk to each other with the container name without creating the link
 
 ### List networks available
 docker network ls
