@@ -4,6 +4,7 @@ Contains app binaries and dependencies. Not a complete OS. No kernel, kernal mos
 ### Notes
 * Each layer in the docker image will have a unique sha256 value
 * A container is just a single read/write layer on top pf image
+* Multiple tags can point to the same imageid since the image is same
 
 ### To know the layers of docker image
 docker history nginx **or** docker image history nginx
