@@ -1,5 +1,9 @@
 # Docker Network
 
+### Notes
+* We can attach more than one networks to container
+* We can dynamically attach and remove the additional networks
+
 ### List networks available
 docker network ls
 
