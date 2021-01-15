@@ -24,3 +24,18 @@ docker network connect
 
 ### Detach a network from container
 docker network disconnect
+
+### Common DNS name for more than one containers
+First create a new network
+```
+docker network create new
+```
+Craete two containers with network alias name as **search**(DNS name) **--network-alias search**
+```
+docker run -d --network new --network-alias search nginx
+docker run -d --network new --network-alias search nginx
+```
+From a new container run **nslookup search** to resolve the dns name **search** and we will get the two ip of the containers created
+```
+docker run --rm --network new alpine nslookup search
+```
