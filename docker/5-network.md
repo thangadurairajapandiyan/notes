@@ -6,6 +6,7 @@
 * Container created with host network connect attach any othetr additional networks
 * If we remove the default bridge network from the container, container can still run without any network.
 * Container with "none" network is different from container without any network
+* containers in the same network can talk to each other using the container name. This is possible because of DNS resolution handled by docker
 
 ### List networks available
 docker network ls
