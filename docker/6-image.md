@@ -13,3 +13,15 @@ docker history nginx **or** docker image history nginx
 ### To see metadata of the docker image
 docker inspect nginx **or** docker image inspect nginx
 
+###  To clean up just "dangling" images
+docker image prune
+
+### To clean up everything images, containers and volumes
+docker system prune
+
+### To remove all unused Images
+docker image prune -a
+
+### To see disk space usage
+docker system df
+
