@@ -31,7 +31,7 @@ cat ~./docker/config.json
         "stackOrchestrator": "swarm"
 }
 ```
-cat ~./docker/daemon.json  (for reference)
+cat ~./docker/daemon.json  (for reference, this location is for windowns, for linux it will be in /etc/docker/daemon.json)
 ```
 {
   "registry-mirrors": [],
@@ -43,3 +43,4 @@ cat ~./docker/daemon.json  (for reference)
   }
 }
 ```
+
