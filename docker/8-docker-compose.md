@@ -13,3 +13,5 @@ docker-compose up -d (to run in background)
 ### To bring down the docker cotainers, volumes and networks defined in the docker compose yaml file
 docker-compose down
 
+### Removing docker images in local during docker-compose down which was built from yaml file
+docker-compose down --rmi local (But the docker image name should not be given in the yaml file, image: feild should be omitted for this service in yaml file)
