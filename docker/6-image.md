@@ -22,6 +22,14 @@ docker system prune
 ### To remove all unused Images
 docker image prune -a
 
-### To see disk space usage
+### To see disk space usage by images, containers, volumes and build caches
 docker system df
+```
+TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE
+Images              25                  12                  6.169GB             4.648GB (75%)
+Containers          45                  18                  1.802GB             1.802GB (99%)
+Local Volumes       6                   0                   3.568MB             3.568MB (100%)
+Build Cache         21                  0                   745.8MB             745.8MB
+
+```
 
