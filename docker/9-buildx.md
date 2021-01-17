@@ -9,11 +9,9 @@ Buildx github repo: https://github.com/docker/buildx
 
 ### To list the drivers available
 docker buildx ls
-```
-
-```
 
 ### To Create new build driver for buildx
+docker buildx create --use
 
 ### To build a multi architecture images with buildx
 docker buildx build --platform=linux/amd64,linux/arm64,linux/arm/v7 .
