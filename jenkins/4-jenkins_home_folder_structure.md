@@ -1,4 +1,6 @@
-1. /var/lib/jenkins
+# Jenkins Folder Structure
+
+/var/lib/jenkins
 drwxr-xr-x  3 jenkins jenkins  4096 Jul  4 03:40 .cache/
 drwx------  3 jenkins jenkins  4096 Jul  4 03:05 .gnupg/
 drwxr-xr-x  3 jenkins jenkins  4096 Jul  4 03:39 .groovy/
@@ -32,7 +34,7 @@ drwxr-xr-x  3 jenkins jenkins  4096 Jul  4 03:40 users/
 drwxr-xr-x  2 jenkins jenkins  4096 Jul  4 03:39 workflow-libs/
 drwxr-xr-x  4 jenkins jenkins  4096 Jul 27 15:55 workspace/
 
-2. tree /var/lib/jenkins/jobs
+### tree /var/lib/jenkins/jobs
 jobs/
 ├── master
 │   ├── builds
@@ -51,14 +53,14 @@ jobs/
     ├── config.xml
     └── nextBuildNumber
     
-3. tree /var/lib/jenkins/nodes
+### tree /var/lib/jenkins/nodes
 nodes/
 ├── slave
 │   └── config.xml
 └── slave2
     └── config.xml
     
-4. tree /var/lib/jenkins/plugins
+### tree /var/lib/jenkins/plugins
 ├── apache-httpcomponents-client-4-api
 │   ├── META-INF
 │   │   ├── MANIFEST.MF
@@ -321,22 +323,22 @@ nodes/
 │       └── licenses.xml
 ├── authentication-tokens.jpi
 
-5. tree /var/lib/jenkins/users
+### tree /var/lib/jenkins/users
 users/
 ├── admin_14784160218747936979
 │   └── config.xml
 └── users.xml
 
-6. tree /var/lib/jenkins/userContent
+### tree /var/lib/jenkins/userContent
 userContent/
 └── readme.txt
 
-7. tree /var/lib/jenkins/workspace
+### tree /var/lib/jenkins/workspace
 workspace/
 ├── master
 └── sleep
 
-8. tree /var/lib/jenkins/secrets
+### tree /var/lib/jenkins/secrets
 secrets/
 ├── com.cloudbees.plugins.credentials.SecretBytes.KEY
 ├── filepath-filters.d
