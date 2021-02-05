@@ -1,5 +1,5 @@
 # Jenkins Folder Structure
-
+```
 /var/lib/jenkins
 drwxr-xr-x  3 jenkins jenkins  4096 Jul  4 03:40 .cache/
 drwx------  3 jenkins jenkins  4096 Jul  4 03:05 .gnupg/
@@ -33,8 +33,9 @@ drwxr-xr-x  2 jenkins jenkins  4096 Jul  4 03:34 userContent/
 drwxr-xr-x  3 jenkins jenkins  4096 Jul  4 03:40 users/
 drwxr-xr-x  2 jenkins jenkins  4096 Jul  4 03:39 workflow-libs/
 drwxr-xr-x  4 jenkins jenkins  4096 Jul 27 15:55 workspace/
-
+```
 ### tree /var/lib/jenkins/jobs
+```
 jobs/
 ├── master
 │   ├── builds
@@ -52,15 +53,17 @@ jobs/
     │   └── permalinks
     ├── config.xml
     └── nextBuildNumber
-    
+```    
 ### tree /var/lib/jenkins/nodes
+```
 nodes/
 ├── slave
 │   └── config.xml
 └── slave2
     └── config.xml
-    
+```    
 ### tree /var/lib/jenkins/plugins
+```
 ├── apache-httpcomponents-client-4-api
 │   ├── META-INF
 │   │   ├── MANIFEST.MF
@@ -322,23 +325,27 @@ nodes/
 │       │   └── authentication-tokens.jar
 │       └── licenses.xml
 ├── authentication-tokens.jpi
-
+```
 ### tree /var/lib/jenkins/users
+```
 users/
 ├── admin_14784160218747936979
 │   └── config.xml
 └── users.xml
-
+```
 ### tree /var/lib/jenkins/userContent
+```
 userContent/
 └── readme.txt
-
+```
 ### tree /var/lib/jenkins/workspace
+```
 workspace/
 ├── master
 └── sleep
-
+```
 ### tree /var/lib/jenkins/secrets
+```
 secrets/
 ├── com.cloudbees.plugins.credentials.SecretBytes.KEY
 ├── filepath-filters.d
@@ -354,3 +361,4 @@ secrets/
 ├── slave-to-master-security-kill-switch
 └── whitelisted-callables.d
     └── default.conf
+```
