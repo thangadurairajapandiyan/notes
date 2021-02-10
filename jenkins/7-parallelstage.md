@@ -1,5 +1,7 @@
 # Parallel stage in Jenkinsfile
 
+### Reference: https://github.com/vigneshsweekaran/hello-world
+
 ### Defining parallel stage in Jenkinsfile without the agent block in stage's. If the stages are not defined with agent block and if it is in parallel block, all the stages will be executed paralley in the same agent where the job is running
 ```
 pipeline {
