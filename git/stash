@@ -16,7 +16,7 @@ files
 git stash -u --> to stash both tracked and untracked files
 we can add the untracked file and run "git stash" also
 
-To do git stash and git stash drop in a single command --> git stash pop
+To do git stash apply and git stash drop in a single command --> git stash pop
 
 Create a stash with message
 git stash save "message"
