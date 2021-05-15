@@ -4,7 +4,7 @@
 git reset HEAD^1 OR git reset HEAD^
 
 ### To reset top two commits
-git reset HEAD^2 OR git reset HEAD^^
+git reset HEAD^^
 
 ### To see the recently executed git commands(last 60 days)
 git reflog

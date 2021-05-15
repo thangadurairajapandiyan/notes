@@ -50,3 +50,6 @@ git branch --merged
 
 ### To see what are all the branches not merged to the current branch
 git branch --no-merged
+
+### To Delete a remote branch from terminal
+git push origin --delete branch_name
